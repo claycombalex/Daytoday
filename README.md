@@ -1,22 +1,23 @@
 # Thank you for using Daytoday!
+The Daytoday Java app is a time management and personal productivity tool. The goal of this project is to create a more in depth time management tool (i.e. more information and customization than an altertnative such as Google Calendar).  It includes a calendar, to-do list, and countdowns. However, the most unique feature is the automatically generated daily schedules. Every day, the software will develop an ideal schedule for you based upon the various tasks you create. The more time you spend creating events and customizing, the more useful this app will be to you. It is ideal for someone who has a lot of various things to do, but has no idea where to start.
 
-This Java app is intended as a more complex time management tool. It includes a calendar, to-do list, and countdowns. However, the most important (and complex) feature is the automatically generated daily schedules. The more time you spend creating events and customizing, the more useful this app will be to you. Of course you do not have to follow the schedules exactly, but it provides a useful example of how you could allocate your time. It is ideal for someone who has a lot of various things to do, but has no idea where to start.
 
 
 
 ## NEW USER
 When you initially start up the software, it will ask you for some information.
 
-Name: The name of the user. This app supports multiple users on the same computer.
-Theme: Choose between dark or light theme.
+- Name: *The name of the user. This app supports multiple users on the same computer.*
 
-Set as default: Because this app supports multiple users, if there are more than one users the app needs to decide what to do. If this user is set as default, the app will start on the home screen for this user. If no user is set as default, a user select screen will be shown instead.
+- Theme: *Choose between dark or light theme.*
 
-Desired hours of sleep: Dedicated sleeping time is added onto the generated schedules. This setting will determine how many hours of sleep to put on the schedule.
+- Set as default: *Because this app supports multiple users, if there are more than one users the app needs to decide what to do. If this user is set as default, the app will start on the home screen for this user. If no user is set as default, a user select screen will be shown instead.*
 
-Desired bedtime: What time do you want to go to sleep on the schedule.
+- Desired hours of sleep: *Dedicated sleeping time is added onto the generated schedules. This setting will determine how many hours of sleep to put on the schedule.*
 
-Bedtime Importance: This is used when an event interferes with sleep on the generated schedule. If you decide a full nights rest isn't super important, then its possible that important events will take away a few hours of your sleep.
+- Desired bedtime: *What time you want to go to sleep on the schedule.*
+
+- Bedtime Importance: *This is used when an event interferes with sleep on the generated schedule. If you decide a full nights rest isn't super important, then its possible that important events will take away a few hours of your sleep.*
 
 
 
