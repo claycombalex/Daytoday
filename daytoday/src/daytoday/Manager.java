@@ -18,7 +18,9 @@ public class Manager {
 			newUser = true;
 
 		dataTxt.seek(0);
-		db.parseDB();
+		
+		if(!newUser)
+			db.parseDB();
 	}
 	
 	public boolean isNewUser() {
