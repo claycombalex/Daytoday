@@ -13,8 +13,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class SceneController implements Initializable {
@@ -23,15 +23,18 @@ public class SceneController implements Initializable {
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
+	
 	String css = this.getClass().getResource("application.css").toExternalForm();
-	@FXML
+	
 	public ComboBox<String> themeBox;
-	@FXML
 	public ComboBox<String> importantBox;
-	@FXML
 	public ComboBox<String> bedtimeBox;
 	public ComboBox<String> reoccurBox;
 	public ComboBox<String> setTimeBox;
+	public AnchorPane reoccuringElems;
+	public AnchorPane oneTimeElems;
+	public AnchorPane startTimeElem;
+	public AnchorPane endTimeElem;
 	
 	ObservableList<String> themeSelect = FXCollections.observableArrayList("Light Theme (Default)", "Dark Theme");
 	ObservableList<String> importantList = FXCollections.observableArrayList("Required (6)", "Very important (5)", "Important (4)", "Somewhat important (3)", "Not very important (2)", "Not important at all (1)");
@@ -109,5 +112,12 @@ public class SceneController implements Initializable {
 		}
 		userScan.close();
 		return retStr;
+	}
+	
+	public void reoccurOrOnce() {
+		String choice = reoccurBox.getValue();
+		if(choice.contentEquals("No (only occurs once)")) {
+			System.out.println(reoccurBox.getId());
+		}
 	}
 }
