@@ -7,7 +7,7 @@ public class Event {
 	private boolean routine;					//is this event a routine?
 	private int importance;						//how important is this event (1-5)
 	private String tag;							//organizational tag of this event
-	private ArrayList<String> keywords;			//keywords to find this event when searching for it
+	private String[] keywords;					//keywords to find this event when searching for it
 	private int startTime;						//when does event start
 	private int endTime;						//when does event end
 	private boolean timeSensitive;				//does this event have to occur at a specific time
@@ -20,7 +20,7 @@ public class Event {
 	
 	private int[][] customInfo;		//2D array to create custom ranges
 	
-	public Event(String name, boolean routine, int importance, boolean[] appear, String tag, ArrayList<String> keywords, 
+	public Event(String name, boolean routine, int importance, boolean[] appear, String tag, String[] keywords, 
 			int startTime, int endTime, boolean timeSensitive, int hoursToComplete, Event parent, int[][] customInfo) {
 		
 		this.name = name;

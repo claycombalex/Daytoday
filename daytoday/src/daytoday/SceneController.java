@@ -1,13 +1,13 @@
 package daytoday;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -19,7 +19,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class SceneController implements Initializable {
@@ -119,6 +118,7 @@ public class SceneController implements Initializable {
 			case "Event_Builder.fxml":
 				reoccurBox.setItems(reoccurList);
 				setTimeBox.setItems(setTimeList);
+				importantBox2.setItems(importantList);
 				break;
 			default:
 				break;
@@ -152,14 +152,25 @@ public class SceneController implements Initializable {
 		int importantVal = 0;
 		String tempStr = "";
 		Scanner importantScan = new Scanner(importantBox2.getValue());
-		importantScan.useDelimiter("(");
+		importantScan.useDelimiter("\\(|\\)");
+		importantScan.next();
 		tempStr = importantScan.next();
-		importantVal = Integer.parseInt(tempStr.substring(0, 1));
+		importantVal = Integer.parseInt(tempStr);
+		importantScan.close();
 		
 		boolean[] appearVal = {showOnCalendar.isSelected(), showOnCountdown.isSelected(), 
 				showOnSchedule.isSelected(), showOnToDo.isSelected()};
 		
+		String keywords[] = keywordsField.getText().split(",");
 		
-		Event theEvent = new Event(eventField.getText(), routineVal, importantVal, appearVal, tagField.getText(), );
+		LocalDate sdat = startDateField.getValue();
+		LocalDate edat = endDateField.getValue();
+		String startTime = "" + sdat.getYear() + String.format("%02d", sdat.getMonth().ordinal() + 1) + String.format("%02d", sdat.getDayOfMonth()) + 
+				startHourField.getText() + startMinuteField.getText();
+		String endTime = "" + edat.getYear() + String.format("%02d", edat.getMonth().ordinal() + 1) + String.format("%02d", edat.getDayOfMonth()) + 
+				endHourField.getText() + endMinuteField.getText();
+		System.out.println(startTime);
+		
+		//Event theEvent = new Event(eventField.getText(), routineVal, importantVal, appearVal, tagField.getText(), keywords);
 	}
 }
