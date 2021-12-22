@@ -162,15 +162,24 @@ public class SceneController implements Initializable {
 				showOnSchedule.isSelected(), showOnToDo.isSelected()};
 		
 		String keywords[] = keywordsField.getText().split(",");
+		for(int i = 0; i < keywords.length; i++) {
+			keywords[i] = keywords[i].trim();
+		}
 		
 		LocalDate sdat = startDateField.getValue();
 		LocalDate edat = endDateField.getValue();
 		String startTime = "" + sdat.getYear() + String.format("%02d", sdat.getMonth().ordinal() + 1) + String.format("%02d", sdat.getDayOfMonth()) + 
-				startHourField.getText() + startMinuteField.getText();
+				String.format("%02d", Integer.parseInt(startHourField.getText())) + String.format("%02d", Integer.parseInt(startMinuteField.getText()));
 		String endTime = "" + edat.getYear() + String.format("%02d", edat.getMonth().ordinal() + 1) + String.format("%02d", edat.getDayOfMonth()) + 
-				endHourField.getText() + endMinuteField.getText();
-		System.out.println(startTime);
+				String.format("%02d", Integer.parseInt(endHourField.getText())) + String.format("%02d", Integer.parseInt(endMinuteField.getText()));
 		
-		//Event theEvent = new Event(eventField.getText(), routineVal, importantVal, appearVal, tagField.getText(), keywords);
+		int hoursToComplete = 0;
+		//possibly add minutes to complete
+		if(!totalHoursField.getText().equals("")) {
+			hoursToComplete = Integer.parseInt(totalHoursField.getText());
+		}
+		
+		Event theEvent = new Event(eventField.getText(), routineVal, importantVal, appearVal, tagField.getText(), keywords, startTime, endTime, hoursToComplete, null, null);
+		System.out.println(theEvent.toString());
 	}
 }

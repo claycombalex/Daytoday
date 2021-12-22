@@ -8,20 +8,19 @@ public class Event {
 	private int importance;						//how important is this event (1-5)
 	private String tag;							//organizational tag of this event
 	private String[] keywords;					//keywords to find this event when searching for it
-	private int startTime;						//when does event start
-	private int endTime;						//when does event end
-	private boolean timeSensitive;				//does this event have to occur at a specific time
-	private int hoursToComplete;
+	private String startTime;					//when does event start
+	private String endTime;						//when does event end
+	private int hoursToComplete;				//how many hours will it take to complete
 	
 	private ArrayList<Event> subevents;			//child events
 	private Event parent;
 	
-	private boolean calendar, todo, schedule;	//where will this event appear
+	private boolean calendar, todo, schedule, countdown;	//where will this event appear
 	
 	private int[][] customInfo;		//2D array to create custom ranges
 	
 	public Event(String name, boolean routine, int importance, boolean[] appear, String tag, String[] keywords, 
-			int startTime, int endTime, boolean timeSensitive, int hoursToComplete, Event parent, int[][] customInfo) {
+			String startTime, String endTime, int hoursToComplete, Event parent, int[][] customInfo) {
 		
 		this.name = name;
 		this.routine = routine;
@@ -30,7 +29,6 @@ public class Event {
 		this.keywords = keywords;
 		this.startTime = startTime;
 		this.endTime = endTime;
-		this.timeSensitive = timeSensitive;
 		this.hoursToComplete = hoursToComplete;
 		
 		if(routine) {
@@ -42,6 +40,7 @@ public class Event {
 		calendar = appear[0];
 		todo = appear[1];
 		schedule = appear[2];
+		countdown = appear[3];
 		
 		subevents = new ArrayList<Event>();
 		this.parent = parent;
@@ -56,6 +55,13 @@ public class Event {
 	}
 	
 	public String toString() {
-		return "";
+		String retStr = "" + name + "|" + routine + "|" + importance + "|" + startTime + "|" + endTime + "|" + hoursToComplete +
+				"|" + calendar + "|" + todo + "|" + schedule + "|" + countdown + "|" + tag + "|";
+		
+		for(int i = 0; i < keywords.length; i++) {
+			retStr = retStr + keywords[i] + "|";
+		}
+		
+		return retStr;
 	}
 }
