@@ -62,6 +62,6 @@ public class Event {
 			retStr = retStr + keywords[i] + "|";
 		}
 		
-		return retStr;
+		return retStr + "\n";
 	}
 }

@@ -4,10 +4,10 @@ import java.io.RandomAccessFile;
 
 public class Manager {
 	
-	private RandomAccessFile dataTxt;
-	private Database db;
-	private boolean newUser = false;
+	public Database db;
 	
+	private RandomAccessFile dataTxt;
+	private boolean newUser = false;
 	String currentLine = null;
 	
 	public Manager() throws IOException {

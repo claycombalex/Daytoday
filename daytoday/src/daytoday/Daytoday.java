@@ -21,10 +21,14 @@ public class Daytoday extends Application {
     
     @Override
     public void start(Stage stage) throws IOException {
-    	Parent root = FXMLLoader.load(getClass().getResource(resource));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource(resource));
+    	Parent root = (Parent) loader.load();
         Scene scene = new Scene(root);
         String css = this.getClass().getResource("application.css").toExternalForm();
         scene.getStylesheets().add(css);
+        
+        SceneController sc = loader.getController();
+        sc.setManager(manager);
         
         stage.setTitle("Daytoday Productivity Software");
         stage.getIcons().add(new Image("day_logo_blank.png")); 

@@ -7,15 +7,15 @@ import java.util.Scanner;
 public class Database {
 	
 	//USER DATA
-	private ArrayList<Event> events;
-	private String userName;
-	private boolean darkTheme;
-	private boolean defaultUser;
-	private double hoursOfSleep;
-	private double bedtime;
-	private int bedtimeImportance;
+	public String userName;
+	public boolean darkTheme = false;
+	public boolean defaultUser;
+	public double hoursOfSleep;
+	public String bedtime;
+	public int bedtimeImportance;
 	
 	private RandomAccessFile db;
+	private ArrayList<Event> events;
 	
 	public Database(RandomAccessFile db) {
 		this.db = db;
@@ -42,7 +42,7 @@ public class Database {
 		darkTheme = Boolean.parseBoolean(userScan.next());
 		defaultUser = Boolean.parseBoolean(userScan.next());
 		hoursOfSleep = Double.parseDouble(userScan.next());
-		bedtime = Double.parseDouble(userScan.next());
+		bedtime = userScan.next();
 		bedtimeImportance = Integer.parseInt(userScan.next());
 	}
 	
@@ -54,13 +54,11 @@ public class Database {
 		boolean theRoutine = Boolean.parseBoolean(eventScan.next()); 
 		int theImportance = Integer.parseInt(eventScan.next());
 		boolean[] appearArr = {true, false, true};
-		
-		System.out.println(eventString);
 	}
 	
 	//when new event is created, write it to the text file
-	public void writeToDB(String stringToWrite, int offset) throws IOException {
-		db.seek(offset);
+	public void writeToDB(String stringToWrite) throws IOException {
+		db.seek(db.length());
 		db.writeBytes(stringToWrite);
 	}
 	

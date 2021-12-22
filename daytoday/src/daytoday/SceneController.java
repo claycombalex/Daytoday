@@ -28,6 +28,7 @@ public class SceneController implements Initializable {
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
+	private Manager manager;
 	
 	//css for background color and various style
 	String css = this.getClass().getResource("application.css").toExternalForm();
@@ -36,6 +37,11 @@ public class SceneController implements Initializable {
 	public ComboBox<String> themeBox;
 	public ComboBox<String> importantBox;
 	public ComboBox<String> bedtimeBox;
+	public TextField usernameField;
+	public CheckBox defaultUserChoice;
+	public TextField hoursOfSleep;
+	public TextField bedtimeHour;
+	public TextField bedtimeMinute;
 	
 	//Control nodes used for building events
 	public ComboBox<String> reoccurBox;
@@ -63,7 +69,10 @@ public class SceneController implements Initializable {
 	ObservableList<String> reoccurList = FXCollections.observableArrayList("No (only occurs once)", "Yes (this event will repeat)");
 	ObservableList<String> setTimeList = FXCollections.observableArrayList("It does not have a set start time or end time", "This event has a set start time",
 			"This event has a set end time", "This event has both a set start time and a set end time");
-
+	
+	public void setManager(Manager manager) {
+		this.manager = manager;
+	}
 	
 	public void switchToIntroScreen(ActionEvent event) throws IOException {
 		currentScene = "Intro_Screen.fxml";
@@ -71,6 +80,7 @@ public class SceneController implements Initializable {
 	}
 	
 	public void switchToNewUser(ActionEvent event) throws IOException {
+		System.out.println(manager);
 		currentScene = "New_User.fxml";
 		loadScene(currentScene, event);
 	}
@@ -96,8 +106,13 @@ public class SceneController implements Initializable {
 	}
 	
 	void loadScene(String sceneName, ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource(sceneName));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource(sceneName));
+    	root = (Parent) loader.load();
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		
+        SceneController sc = loader.getController();
+        sc.setManager(manager);
+        
 		scene = new Scene(root);
 		scene.getStylesheets().add(css);
 		stage.setScene(scene);
@@ -143,8 +158,7 @@ public class SceneController implements Initializable {
 		}
 	}
 	
-	public void createEvent() {
-		
+	public void createEvent() throws IOException {
 		boolean routineVal = true;
 		if(reoccurBox.getValue().contentEquals("No (only occurs once)"))
 			routineVal = false;
@@ -180,6 +194,31 @@ public class SceneController implements Initializable {
 		}
 		
 		Event theEvent = new Event(eventField.getText(), routineVal, importantVal, appearVal, tagField.getText(), keywords, startTime, endTime, hoursToComplete, null, null);
-		System.out.println(theEvent.toString());
+		manager.db.addEvent(theEvent);
+		manager.db.writeToDB(theEvent.toString());
+	}
+	
+	public void newUserValues() {
+		manager.db.userName = usernameField.getText();
+		
+		if(reoccurBox.getValue().contentEquals("Dark Theme"))
+			manager.db.darkTheme = true;
+		
+		manager.db.defaultUser = defaultUserChoice.isSelected();
+		manager.db.hoursOfSleep = Double.parseDouble(hoursOfSleep.getText());
+		
+		String AMPM = bedtimeBox.getValue();
+		int bedHour = Integer.parseInt(bedtimeHour.getText());
+		int newHour = 0;
+		
+		if(bedHour == 12)
+			bedHour = 0;
+		
+		if(AMPM.equals("AM"))
+			newHour = bedHour;
+		else
+			newHour = bedHour + 12;
+		
+		manager.db.bedtime = String.format("%02d", newHour) + String.format("%02d", bedtimeMinute.getText());
 	}
 }
