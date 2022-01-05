@@ -15,7 +15,7 @@ public class Database {
 	public int bedtimeImportance;
 	
 	private RandomAccessFile db;
-	private ArrayList<Event> events;
+	public ArrayList<Event> events;
 	
 	public Database(RandomAccessFile db) {
 		this.db = db;

@@ -46,6 +46,10 @@ public class Event {
 		this.parent = parent;
 	}
 	
+	public String getName() {
+		return name;
+	}
+	
 	public ArrayList<Event> getSubevents() {
 		return subevents;
 	}

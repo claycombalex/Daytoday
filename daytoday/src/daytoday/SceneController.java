@@ -17,9 +17,15 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.TitledPane;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.control.Accordion;
 
 public class SceneController implements Initializable {
 	
@@ -62,6 +68,11 @@ public class SceneController implements Initializable {
 	public TextField tagField;
 	public TextArea keywordsField;
 	
+	//Control nodes for todo list
+	public AnchorPane toDoListMain;
+	public ScrollPane scrollField;
+	public Accordion accordionField;
+	
 	//lists for choice boxes
 	ObservableList<String> themeSelect = FXCollections.observableArrayList("Light Theme (Default)", "Dark Theme");
 	ObservableList<String> importantList = FXCollections.observableArrayList("Required (6)", "Very important (5)", "Important (4)", "Somewhat important (3)", "Not very important (2)", "Not important at all (1)");
@@ -87,7 +98,6 @@ public class SceneController implements Initializable {
 	public void switchToDoList(ActionEvent event) throws IOException {
 		currentScene = "To_Do_List.fxml";
 		loadScene(currentScene, event);
-		
 	}
 	
 	public void switchToHomeScreen(ActionEvent event) throws IOException {
@@ -134,6 +144,8 @@ public class SceneController implements Initializable {
 				setTimeBox.setItems(setTimeList);
 				importantBox2.setItems(importantList);
 				break;
+			case "To_Do_List.fxml":
+				createToDo();
 			default:
 				break;
 		}
@@ -219,5 +231,23 @@ public class SceneController implements Initializable {
 			newHour = bedHour + 12;
 		
 		manager.db.bedtime = String.format("%02d", newHour) + String.format("%02d", bedtimeMinute.getText());
+	}
+	
+	public void createToDo() {
+		for(int i = 0; i < manager.db.events.size(); i++) {
+			AnchorPane tempPane = new AnchorPane();
+			Text theText = new Text("test text!");
+			theText.setY(100);
+			tempPane.getChildren().add(theText);
+			tempPane.setMaxHeight(150);
+			tempPane.setMinHeight(150);
+			Event curEvent = manager.db.events.get(i);
+			TitledPane titled = new TitledPane(curEvent.getName(), tempPane);
+			Font theFont = new Font("System", 18);
+			titled.setFont(theFont);
+			titled.setAnimated(false);
+			
+			accordionField.getPanes().add(titled);
+		}
 	}
 }
