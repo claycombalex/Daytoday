@@ -62,7 +62,8 @@ public class Database {
 		db.writeBytes(stringToWrite);
 	}
 	
-	public void addEvent(Event theEvent) {
+	public void addEvent(Event theEvent) throws IOException {
 		events.add(theEvent);
+		writeToDB(theEvent.toString());
 	}
 }

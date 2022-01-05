@@ -80,7 +80,6 @@ public class SceneController implements Initializable {
 	}
 	
 	public void switchToNewUser(ActionEvent event) throws IOException {
-		System.out.println(manager);
 		currentScene = "New_User.fxml";
 		loadScene(currentScene, event);
 	}
@@ -158,7 +157,7 @@ public class SceneController implements Initializable {
 		}
 	}
 	
-	public void createEvent() throws IOException {
+	public void createEvent(ActionEvent event) throws IOException {
 		boolean routineVal = true;
 		if(reoccurBox.getValue().contentEquals("No (only occurs once)"))
 			routineVal = false;
@@ -195,7 +194,7 @@ public class SceneController implements Initializable {
 		
 		Event theEvent = new Event(eventField.getText(), routineVal, importantVal, appearVal, tagField.getText(), keywords, startTime, endTime, hoursToComplete, null, null);
 		manager.db.addEvent(theEvent);
-		manager.db.writeToDB(theEvent.toString());
+		switchToHomeScreen(event);
 	}
 	
 	public void newUserValues() {
