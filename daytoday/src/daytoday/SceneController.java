@@ -2,6 +2,9 @@ package daytoday;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
@@ -122,6 +125,11 @@ public class SceneController implements Initializable {
         SceneController sc = loader.getController();
         sc.setManager(manager);
         
+        if(sceneName.contentEquals("To_Do_List.fxml")) {
+        	SceneController todo = (SceneController) loader.getController();
+        	todo.createToDo();
+        }
+        
 		scene = new Scene(root);
 		scene.getStylesheets().add(css);
 		stage.setScene(scene);
@@ -144,8 +152,6 @@ public class SceneController implements Initializable {
 				setTimeBox.setItems(setTimeList);
 				importantBox2.setItems(importantList);
 				break;
-			case "To_Do_List.fxml":
-				createToDo();
 			default:
 				break;
 		}
@@ -186,9 +192,10 @@ public class SceneController implements Initializable {
 		boolean[] appearVal = {showOnCalendar.isSelected(), showOnCountdown.isSelected(), 
 				showOnSchedule.isSelected(), showOnToDo.isSelected()};
 		
-		String keywords[] = keywordsField.getText().split(",");
-		for(int i = 0; i < keywords.length; i++) {
-			keywords[i] = keywords[i].trim();
+		ArrayList<String> keywords = (ArrayList<String>) Arrays.asList(keywordsField.getText().split(","));
+		
+		for(int i = 0; i < keywords.size(); i++) {
+			keywords.set(i, keywords.get(i).trim());
 		}
 		
 		LocalDate sdat = startDateField.getValue();

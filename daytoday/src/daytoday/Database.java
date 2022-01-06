@@ -17,19 +17,19 @@ public class Database {
 	private RandomAccessFile db;
 	public ArrayList<Event> events;
 	
-	public Database(RandomAccessFile db) {
+	public Database(RandomAccessFile db) throws IOException {
 		this.db = db;
 		events = new ArrayList<Event>();
 	}
 	
 	//when application is loaded, load the data from the text file into memory
 	public void parseDB() throws IOException {
-		setUserData();
+		//setUserData();
 		
 		String currentLine = null;
-		//while((currentLine = db.readLine()) != null && !currentLine.isBlank()) {
-			//parseEvent(currentLine);
-		//}
+		while((currentLine = db.readLine()) != null && !currentLine.isBlank()) {
+			parseEvent(currentLine);
+		}
 		
 	}
 	
@@ -53,7 +53,20 @@ public class Database {
 		String theName = eventScan.next();
 		boolean theRoutine = Boolean.parseBoolean(eventScan.next()); 
 		int theImportance = Integer.parseInt(eventScan.next());
-		boolean[] appearArr = {true, false, true};
+		String startTime = eventScan.next();
+		String endTime = eventScan.next();
+		int hours = Integer.parseInt(eventScan.next());
+		boolean[] appearArr = {Boolean.parseBoolean(eventScan.next()), Boolean.parseBoolean(eventScan.next()),
+							   Boolean.parseBoolean(eventScan.next()), Boolean.parseBoolean(eventScan.next())};
+		String theTag = eventScan.next();
+		ArrayList<String> keywords = new ArrayList<String>();
+		while(eventScan.hasNext()) {
+			keywords.add(eventScan.next());
+		}
+		
+		Event newEvent = new Event(theName, theRoutine, theImportance, appearArr, theTag, keywords, startTime, endTime, hours, null, null);
+		events.add(newEvent);
+		System.out.println(newEvent.toString());
 	}
 	
 	//when new event is created, write it to the text file

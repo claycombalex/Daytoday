@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 public class Manager {
-	
+
 	public Database db;
 	
 	private RandomAccessFile dataTxt;
@@ -14,9 +14,10 @@ public class Manager {
 		dataTxt = new RandomAccessFile("userData.txt", "rw");
 		db = new Database(dataTxt);
 		
+		
 		if((currentLine = dataTxt.readLine()) == null)
 			newUser = true;
-
+		
 		dataTxt.seek(0);
 		
 		if(!newUser)

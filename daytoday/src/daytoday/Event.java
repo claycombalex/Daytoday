@@ -7,7 +7,7 @@ public class Event {
 	private boolean routine;					//is this event a routine?
 	private int importance;						//how important is this event (1-5)
 	private String tag;							//organizational tag of this event
-	private String[] keywords;					//keywords to find this event when searching for it
+	private ArrayList<String> keywords;			//keywords to find this event when searching for it
 	private String startTime;					//when does event start
 	private String endTime;						//when does event end
 	private int hoursToComplete;				//how many hours will it take to complete
@@ -19,7 +19,7 @@ public class Event {
 	
 	private int[][] customInfo;		//2D array to create custom ranges
 	
-	public Event(String name, boolean routine, int importance, boolean[] appear, String tag, String[] keywords, 
+	public Event(String name, boolean routine, int importance, boolean[] appear, String tag, ArrayList<String> keywords, 
 			String startTime, String endTime, int hoursToComplete, Event parent, int[][] customInfo) {
 		
 		this.name = name;
@@ -62,8 +62,8 @@ public class Event {
 		String retStr = "" + name + "|" + routine + "|" + importance + "|" + startTime + "|" + endTime + "|" + hoursToComplete +
 				"|" + calendar + "|" + todo + "|" + schedule + "|" + countdown + "|" + tag + "|";
 		
-		for(int i = 0; i < keywords.length; i++) {
-			retStr = retStr + keywords[i] + "|";
+		for(int i = 0; i < keywords.size(); i++) {
+			retStr = retStr + keywords.get(i) + "|";
 		}
 		
 		return retStr + "\n";
