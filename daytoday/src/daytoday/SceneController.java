@@ -4,7 +4,6 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
@@ -46,8 +45,8 @@ public class SceneController implements Initializable {
 	public ComboBox<String> themeBox;
 	public ComboBox<String> importantBox;
 	public ComboBox<String> bedtimeBox;
-	public TextField usernameField;
 	public CheckBox defaultUserChoice;
+	public TextField usernameField;
 	public TextField hoursOfSleep;
 	public TextField bedtimeHour;
 	public TextField bedtimeMinute;
@@ -55,19 +54,21 @@ public class SceneController implements Initializable {
 	//Control nodes used for building events
 	public ComboBox<String> reoccurBox;
 	public ComboBox<String> setTimeBox;
+	public ComboBox<String> startBox;
+	public ComboBox<String> endBox;
+	public ChoiceBox<String> importantBox2;
 	public TextField eventField;
-	public DatePicker startDateField;
 	public TextField startHourField;
 	public TextField startMinuteField;
-	public DatePicker endDateField;
 	public TextField endHourField;
 	public TextField endMinuteField;
 	public TextField totalHoursField;
+	public DatePicker startDateField;
+	public DatePicker endDateField;
 	public CheckBox showOnCalendar;
 	public CheckBox showOnCountdown;
 	public CheckBox showOnSchedule;
 	public CheckBox showOnToDo;
-	public ChoiceBox<String> importantBox2;
 	public TextField tagField;
 	public TextArea keywordsField;
 	
@@ -79,7 +80,7 @@ public class SceneController implements Initializable {
 	//lists for choice boxes
 	ObservableList<String> themeSelect = FXCollections.observableArrayList("Light Theme (Default)", "Dark Theme");
 	ObservableList<String> importantList = FXCollections.observableArrayList("Required (6)", "Very important (5)", "Important (4)", "Somewhat important (3)", "Not very important (2)", "Not important at all (1)");
-	ObservableList<String> bedtimeList = FXCollections.observableArrayList("AM", "PM");
+	ObservableList<String> AMPMList = FXCollections.observableArrayList("AM", "PM");
 	ObservableList<String> reoccurList = FXCollections.observableArrayList("No (only occurs once)", "Yes (this event will repeat)");
 	ObservableList<String> setTimeList = FXCollections.observableArrayList("It does not have a set start time or end time", "This event has a set start time",
 			"This event has a set end time", "This event has both a set start time and a set end time");
@@ -110,6 +111,11 @@ public class SceneController implements Initializable {
 	
 	public void switchToEventBuilder(ActionEvent event) throws IOException {
 		currentScene = "Event_Builder.fxml";
+		loadScene(currentScene, event);
+	}
+	
+	public void switchToCalendar(ActionEvent event) throws IOException {
+		currentScene = "Month_Calendar.fxml";
 		loadScene(currentScene, event);
 	}
 	
@@ -144,13 +150,17 @@ public class SceneController implements Initializable {
 				themeBox.setItems(themeSelect);
 				themeBox.setValue("Light Theme (Default)");
 				importantBox.setItems(importantList);
-				bedtimeBox.setItems(bedtimeList);
+				bedtimeBox.setItems(AMPMList);
 				bedtimeBox.setValue("PM");
 				break;
 			case "Event_Builder.fxml":
 				reoccurBox.setItems(reoccurList);
 				setTimeBox.setItems(setTimeList);
 				importantBox2.setItems(importantList);
+				startBox.setItems(AMPMList);
+				startBox.setValue("AM");
+				endBox.setItems(AMPMList);
+				endBox.setValue("AM");
 				break;
 			default:
 				break;

@@ -14,7 +14,6 @@ public class Manager {
 		dataTxt = new RandomAccessFile("userData.txt", "rw");
 		db = new Database(dataTxt);
 		
-		
 		if((currentLine = dataTxt.readLine()) == null)
 			newUser = true;
 		

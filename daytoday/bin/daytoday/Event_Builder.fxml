@@ -41,10 +41,10 @@
                         <Font name="System Bold" size="32.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="startDateField" layoutX="115.0" layoutY="235.0" prefHeight="34.0" prefWidth="183.0" promptText="Start Date" />
-                  <TextField fx:id="startHourField" layoutX="308.0" layoutY="235.0" prefHeight="34.0" prefWidth="75.0" promptText="Hour" />
-                  <TextField fx:id="startMinuteField" layoutX="406.0" layoutY="235.0" prefHeight="34.0" prefWidth="75.0" promptText="Minute" />
-                  <Label layoutX="389.0" layoutY="221.0" prefHeight="54.0" prefWidth="4.0" text=":" textAlignment="CENTER">
+                  <DatePicker fx:id="startDateField" layoutX="69.0" layoutY="241.0" prefHeight="34.0" prefWidth="183.0" promptText="Start Date" />
+                  <TextField fx:id="startHourField" layoutX="262.0" layoutY="241.0" prefHeight="34.0" prefWidth="75.0" promptText="Hour" />
+                  <TextField fx:id="startMinuteField" layoutX="360.0" layoutY="241.0" prefHeight="34.0" prefWidth="75.0" promptText="Minute" />
+                  <Label layoutX="343.0" layoutY="227.0" prefHeight="54.0" prefWidth="4.0" text=":" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="32.0" />
                      </font>
@@ -54,10 +54,10 @@
                         <Font name="System Bold" size="32.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="endDateField" layoutX="115.0" layoutY="320.0" prefHeight="34.0" prefWidth="183.0" promptText="End Date" />
-                  <TextField fx:id="endHourField" layoutX="308.0" layoutY="320.0" prefHeight="34.0" prefWidth="75.0" promptText="Hour" />
-                  <TextField fx:id="endMinuteField" layoutX="406.0" layoutY="320.0" prefHeight="34.0" prefWidth="75.0" promptText="Minute" />
-                  <Label layoutX="389.0" layoutY="306.0" prefHeight="54.0" prefWidth="4.0" text=":" textAlignment="CENTER">
+                  <DatePicker fx:id="endDateField" layoutX="71.0" layoutY="319.0" prefHeight="34.0" prefWidth="183.0" promptText="End Date" />
+                  <TextField fx:id="endHourField" layoutX="264.0" layoutY="319.0" prefHeight="34.0" prefWidth="75.0" promptText="Hour" />
+                  <TextField fx:id="endMinuteField" layoutX="362.0" layoutY="319.0" prefHeight="34.0" prefWidth="75.0" promptText="Minute" />
+                  <Label layoutX="345.0" layoutY="305.0" prefHeight="54.0" prefWidth="4.0" text=":" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="32.0" />
                      </font>
@@ -100,6 +100,8 @@
                   <Label alignment="CENTER" layoutX="87.0" layoutY="760.0" prefHeight="22.0" prefWidth="455.0" text="Other keywords to find this event when searching. Seperate keywords with commas" textAlignment="CENTER" />
                   <TextArea fx:id="keywordsField" layoutX="84.0" layoutY="798.0" prefHeight="98.0" prefWidth="458.0" promptText="Enter keywords here" />
                   <ComboBox fx:id="setTimeBox" layoutX="79.0" layoutY="143.0" prefHeight="29.0" prefWidth="436.0" />
+                  <ComboBox fx:id="startBox" layoutX="444.0" layoutY="241.0" prefHeight="34.0" prefWidth="71.0" />
+                  <ComboBox fx:id="endBox" layoutX="444.0" layoutY="319.0" prefHeight="34.0" prefWidth="71.0" />
                </children>
             </AnchorPane>
         </content>
