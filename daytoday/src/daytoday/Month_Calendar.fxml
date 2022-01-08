@@ -1,243 +1,261 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="daytoday.SceneController">
+<AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="daytoday.SceneController">
    <children>
-      <Label layoutX="263.0" text="JULY">
+      <Label layoutX="548.0" text="JULY">
          <font>
-            <Font name="System Bold" size="32.0" />
+            <Font name="System Bold" size="52.0" />
          </font>
       </Label>
-      <Label layoutX="278.0" layoutY="33.0" text="2021">
+      <Label layoutX="580.0" layoutY="57.0" text="2022">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="130.0" layoutY="60.0" text="DAILY">
+      <Label layoutX="288.0" layoutY="100.0" prefWidth="70.0" text="DAILY">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="204.0" layoutY="60.0" text="WEEKLY">
+      <Label layoutX="467.0" layoutY="100.0" text="WEEKLY">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="286.0" layoutY="60.0" text="MONTHLY">
+      <Label layoutX="682.0" layoutY="100.0" text="MONTHLY">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="383.0" layoutY="60.0" text="YEARLY">
+      <Label layoutX="906.0" layoutY="100.0" text="YEARLY">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="6.0" layoutX="286.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="80.0" />
-      <Line endX="398.9071044921875" endY="0.7071075439453125" layoutX="149.0" layoutY="98.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="398.9071044921875" endY="0.7071075439453125" layoutX="149.0" layoutY="153.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="398.9071044921875" endY="0.7071075439453125" layoutX="149.0" layoutY="210.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="398.9071044921875" endY="0.7071075439453125" layoutX="149.0" layoutY="263.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="398.9071044921875" endY="0.7071075439453125" layoutX="149.0" layoutY="321.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="115.0" layoutX="149.0" layoutY="377.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="-100.0" endY="277.4000244140625" layoutX="149.0" layoutY="99.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="-100.0" endY="277.4000244140625" layoutX="221.0" layoutY="98.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="-100.0" endY="277.4000244140625" layoutX="292.0" layoutY="98.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="-100.0" endY="277.4000244140625" layoutX="364.0" layoutY="99.0" startX="-100.0" strokeWidth="3.5" />
-      <Line endX="-100.0" endY="211.0" layoutX="434.0" layoutY="110.0" startX="-100.0" startY="-11.0" strokeWidth="3.5" />
-      <Line endX="-100.0" endY="211.0" layoutX="504.0" layoutY="110.0" startX="-100.0" startY="-11.0" strokeWidth="3.5" />
-      <Line endX="-100.0" endY="211.0" layoutX="576.0" layoutY="110.0" startX="-100.0" startY="-11.0" strokeWidth="3.5" />
-      <Line endX="-100.0" endY="213.0" layoutX="648.0" layoutY="110.0" startX="-100.0" startY="-10.707107543945312" strokeWidth="3.5" />
-      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="99.0" prefHeight="56.0" prefWidth="74.0" text="3" textAlignment="CENTER">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="6.0" layoutX="682.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Line endX="800.0" layoutX="291.0" layoutY="157.0" startX="-100.0" strokeWidth="5.0" />
+      <Line endX="284.0" layoutX="291.0" layoutY="692.0" startX="-100.0" strokeWidth="5.0" />
+      <Line endX="-102.50001525878906" endY="593.0" layoutX="290.0" layoutY="99.0" startX="-102.50001525878906" startY="58.0" strokeWidth="5.0" />
+      <Line endX="-95.5" endY="490.0" layoutX="1190.0" layoutY="99.0" startX="-95.5" startY="58.0" strokeWidth="5.0" />
+      <Line endX="-105.0" endY="591.5" layoutX="421.0" layoutY="97.0" startX="-105.0" startY="63.5" strokeWidth="5.0" />
+      <Line endX="-100.0" endY="591.5" layoutX="546.0" layoutY="97.0" startX="-100.0" startY="63.5" strokeWidth="5.0" />
+      <Line endX="-105.0" endY="591.5" layoutX="680.0" layoutY="97.0" startX="-105.0" startY="63.5" strokeWidth="5.0" />
+      <Line endX="-105.0" endY="488.5" layoutX="810.0" layoutY="97.0" startX="-105.0" startY="63.5" strokeWidth="5.0" />
+      <Line endX="-105.0" endY="488.5" layoutX="940.0" layoutY="97.0" startX="-105.0" startY="63.5" strokeWidth="5.0" />
+      <Line endX="-104.9998779296875" endY="488.5" layoutX="1070.0" layoutY="97.0" startX="-104.99993896484375" startY="63.5" strokeWidth="5.0" />
+      <Line endX="800.0" layoutX="291.0" layoutY="267.0" startX="-100.0" strokeWidth="5.0" />
+      <Line endX="796.0" layoutX="295.0" layoutY="374.0" startX="-104.0" strokeWidth="5.0" />
+      <Line endX="796.0" layoutX="295.0" layoutY="480.0" startX="-104.0" strokeWidth="5.0" />
+      <Line endX="796.0" layoutX="295.0" layoutY="589.0" startX="-104.0" strokeWidth="5.0" />
+      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="155.0" prefHeight="106.0" prefWidth="126.0" text="1">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="119.0" layoutY="99.0" prefHeight="56.0" prefWidth="74.0" text="2" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="320.0" layoutY="155.0" prefHeight="106.0" prefWidth="126.0" text="2">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="51.0" layoutY="99.0" prefHeight="56.0" prefWidth="74.0" text="1" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="450.0" layoutY="155.0" prefHeight="106.0" prefWidth="126.0" text="3">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="263.0" layoutY="99.0" prefHeight="56.0" prefWidth="74.0" text="4" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="578.0" layoutY="155.0" prefHeight="106.0" prefWidth="126.0" text="4">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="329.0" layoutY="99.0" prefHeight="56.0" prefWidth="74.0" text="5" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="708.0" layoutY="155.0" prefHeight="106.0" prefWidth="126.0" text="5">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="404.0" layoutY="99.0" prefHeight="56.0" prefWidth="74.0" text="6" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="838.0" layoutY="155.0" prefHeight="106.0" prefWidth="126.0" text="6">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="476.0" layoutY="99.0" prefHeight="56.0" prefWidth="74.0" text="7" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="969.0" layoutY="155.0" prefHeight="106.0" prefWidth="126.0" text="7">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="51.0" layoutY="156.0" prefHeight="56.0" prefWidth="74.0" text="8" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="265.0" prefHeight="106.0" prefWidth="126.0" text="8">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="119.0" layoutY="156.0" prefHeight="56.0" prefWidth="74.0" text="9" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="320.0" layoutY="265.0" prefHeight="106.0" prefWidth="126.0" text="9">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="156.0" prefHeight="56.0" prefWidth="74.0" text="10" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="450.0" layoutY="265.0" prefHeight="106.0" prefWidth="126.0" text="10">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="263.0" layoutY="156.0" prefHeight="56.0" prefWidth="74.0" text="11" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="578.0" layoutY="265.0" prefHeight="106.0" prefWidth="126.0" text="11">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="329.0" layoutY="156.0" prefHeight="56.0" prefWidth="74.0" text="12" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="708.0" layoutY="265.0" prefHeight="106.0" prefWidth="126.0" text="12">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="404.0" layoutY="156.0" prefHeight="56.0" prefWidth="74.0" text="13" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="838.0" layoutY="265.0" prefHeight="106.0" prefWidth="126.0" text="13">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="476.0" layoutY="156.0" prefHeight="56.0" prefWidth="74.0" text="14" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="969.0" layoutY="265.0" prefHeight="106.0" prefWidth="126.0" text="14">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="51.0" layoutY="210.0" prefHeight="56.0" prefWidth="74.0" text="15" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="371.0" prefHeight="106.0" prefWidth="126.0" text="15">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="119.0" layoutY="210.0" prefHeight="56.0" prefWidth="74.0" text="16" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="320.0" layoutY="371.0" prefHeight="106.0" prefWidth="126.0" text="16">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="210.0" prefHeight="56.0" prefWidth="74.0" text="17" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="450.0" layoutY="371.0" prefHeight="106.0" prefWidth="126.0" text="17">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="261.0" layoutY="209.0" prefHeight="56.0" prefWidth="74.0" text="18" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="578.0" layoutY="371.0" prefHeight="106.0" prefWidth="126.0" text="18">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="329.0" layoutY="210.0" prefHeight="56.0" prefWidth="74.0" text="19" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="708.0" layoutY="371.0" prefHeight="106.0" prefWidth="126.0" text="19">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="404.0" layoutY="210.0" prefHeight="56.0" prefWidth="74.0" text="20" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="838.0" layoutY="371.0" prefHeight="106.0" prefWidth="126.0" text="20">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="476.0" layoutY="210.0" prefHeight="56.0" prefWidth="74.0" text="21" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="969.0" layoutY="371.0" prefHeight="106.0" prefWidth="126.0" text="21">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="51.0" layoutY="266.0" prefHeight="56.0" prefWidth="74.0" text="22" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="480.0" prefHeight="106.0" prefWidth="126.0" text="22">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="119.0" layoutY="266.0" prefHeight="56.0" prefWidth="74.0" text="23" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="320.0" layoutY="480.0" prefHeight="106.0" prefWidth="126.0" text="23">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="266.0" prefHeight="56.0" prefWidth="74.0" text="24" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="450.0" layoutY="480.0" prefHeight="106.0" prefWidth="126.0" text="24">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="263.0" layoutY="266.0" prefHeight="56.0" prefWidth="74.0" text="25" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="578.0" layoutY="480.0" prefHeight="106.0" prefWidth="126.0" text="25">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="329.0" layoutY="266.0" prefHeight="56.0" prefWidth="74.0" text="26" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="708.0" layoutY="480.0" prefHeight="106.0" prefWidth="126.0" text="26">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="404.0" layoutY="266.0" prefHeight="56.0" prefWidth="74.0" text="27" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="838.0" layoutY="480.0" prefHeight="106.0" prefWidth="126.0" text="27">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="476.0" layoutY="266.0" prefHeight="56.0" prefWidth="74.0" text="28" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="969.0" layoutY="480.0" prefHeight="106.0" prefWidth="126.0" text="28">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="51.0" layoutY="323.0" prefHeight="56.0" prefWidth="74.0" text="29" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="584.0" prefHeight="106.0" prefWidth="126.0" text="29">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="119.0" layoutY="323.0" prefHeight="56.0" prefWidth="74.0" text="30" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="320.0" layoutY="584.0" prefHeight="106.0" prefWidth="126.0" text="30">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="323.0" prefHeight="56.0" prefWidth="74.0" text="31" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="450.0" layoutY="584.0" prefHeight="106.0" prefWidth="126.0" text="31">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="57.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="57.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="59.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="57.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="57.0" layoutY="351.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="128.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="127.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="128.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="128.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="128.0" layoutY="351.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="198.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="271.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="198.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="198.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="198.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="198.0" layoutY="351.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="271.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="271.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="271.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="340.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="340.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="340.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="340.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="412.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="484.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="412.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="484.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="412.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="484.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="412.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="19.0" layoutX="484.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+      <Label alignment="CENTER" layoutX="192.0" layoutY="226.0" prefHeight="35.0" prefWidth="119.0" text="Test Event" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="192.0" layoutY="222.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Label alignment="CENTER" layoutX="192.0" layoutY="221.0" prefHeight="40.0" prefWidth="119.0" text="Testing Testing Testing Testing Testing" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="192.0" layoutY="328.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="192.0" layoutY="435.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="192.0" layoutY="544.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="192.0" layoutY="647.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="321.0" layoutY="222.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="321.0" layoutY="329.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="321.0" layoutY="436.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="321.0" layoutY="545.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="321.0" layoutY="648.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="451.0" layoutY="222.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="451.0" layoutY="329.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="451.0" layoutY="436.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="451.0" layoutY="545.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="451.0" layoutY="648.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="580.0" layoutY="222.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="580.0" layoutY="329.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="580.0" layoutY="436.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="580.0" layoutY="545.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="710.0" layoutY="221.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="710.0" layoutY="328.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="710.0" layoutY="435.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="710.0" layoutY="544.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="840.0" layoutY="222.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="840.0" layoutY="329.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="840.0" layoutY="436.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="840.0" layoutY="545.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="970.0" layoutY="221.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="970.0" layoutY="328.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="970.0" layoutY="435.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="970.0" layoutY="544.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
+      <Line endX="-44.20001220703125" endY="3.814697265625E-6" layoutX="525.0" layoutY="36.0" startX="-98.39996337890625" startY="3.814697265625E-6" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-87.20001220703125" endY="-26.60000228881836" layoutX="533.0" layoutY="42.0" startX="-111.20001220703125" startY="-7.799999237060547" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-82.5999755859375" endY="5.8000030517578125" layoutX="530.0" layoutY="52.0" startX="-107.79998779296875" startY="-15.999996185302734" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-32.0" endY="3.814697265625E-6" layoutX="818.0" layoutY="34.0" startX="-83.60003662109375" startY="3.814697265625E-6" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-87.20001220703125" endY="-26.60000228881836" layoutX="880.0" layoutY="40.0" rotate="90.0" startX="-111.20001220703125" startY="-7.799999237060547" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-82.5999755859375" endY="5.8000030517578125" layoutX="875.0" layoutY="53.0" rotate="90.0" startX="-107.79998779296875" startY="-15.999996185302734" stroke="#818181" strokeWidth="5.0" />
+      <Button layoutX="466.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToWeekly" opacity="0.0" prefHeight="35.0" prefWidth="94.0" text="Button" />
    </children>
 </AnchorPane>

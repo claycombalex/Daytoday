@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="daytoday.SceneController">
+   <children>
+      <Label layoutX="288.0" layoutY="100.0" prefWidth="70.0" text="DAILY">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="100.0" text="WEEKLY">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="682.0" layoutY="100.0" text="MONTHLY">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="906.0" layoutY="100.0" text="YEARLY">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="4.0" layoutX="466.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="93.0" />
+      <Label alignment="CENTER" layoutX="522.0" text="1st - 7th">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="52.0" text="July">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Accordion layoutX="80.0" layoutY="154.0" prefHeight="498.0" prefWidth="1119.0">
+        <panes>
+          <TitledPane animated="false" text="Sunday, July 1st">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Circle layoutX="20.0" layoutY="27.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="67.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="110.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="153.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="195.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="38.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="289.0" layoutY="31.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="71.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="114.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="157.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="199.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="307.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="563.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="72.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="115.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="158.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="200.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="581.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="852.0" layoutY="84.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="182.0" text="Daily view">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+          <TitledPane animated="false" prefHeight="217.0" prefWidth="322.0" text="Monday, July 2nd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Circle layoutX="20.0" layoutY="27.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="67.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="110.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="153.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="195.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="38.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="289.0" layoutY="31.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="71.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="114.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="157.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="199.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="307.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="563.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="72.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="115.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="158.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="200.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="581.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="852.0" layoutY="84.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="182.0" text="Daily view">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="217.0" prefWidth="322.0" text="Tuesday, July 3rd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Circle layoutX="20.0" layoutY="27.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="67.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="110.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="153.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="195.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="38.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="289.0" layoutY="31.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="71.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="114.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="157.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="199.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="307.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="563.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="72.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="115.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="158.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="200.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="581.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="852.0" layoutY="84.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="182.0" text="Daily view">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="217.0" prefWidth="322.0" text="Wednesday, July 4th">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Circle layoutX="20.0" layoutY="27.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="67.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="110.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="153.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="195.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="38.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="289.0" layoutY="31.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="71.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="114.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="157.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="199.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="307.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="563.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="72.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="115.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="158.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="200.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="581.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="852.0" layoutY="84.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="182.0" text="Daily view">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="217.0" prefWidth="322.0" text="Thursday, July 5th">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Circle layoutX="20.0" layoutY="27.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="67.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="110.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="153.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="195.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="38.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="289.0" layoutY="31.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="71.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="114.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="157.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="199.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="307.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="563.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="72.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="115.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="158.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="200.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="581.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="852.0" layoutY="84.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="182.0" text="Daily view">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="217.0" prefWidth="322.0" text="Saturday, July 6th">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Circle layoutX="20.0" layoutY="27.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="67.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="110.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="153.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="195.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="38.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="289.0" layoutY="31.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="71.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="114.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="157.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="199.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="307.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="563.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="72.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="115.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="158.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="200.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="581.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="852.0" layoutY="84.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="182.0" text="Daily view">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="129.0" prefWidth="838.0" text="Sunday, July 7th">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Circle layoutX="20.0" layoutY="27.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="67.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="110.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="153.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="20.0" layoutY="195.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="38.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="38.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="289.0" layoutY="31.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="71.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="114.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="157.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="289.0" layoutY="199.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="307.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="307.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Circle layoutX="563.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="72.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="115.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="158.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle layoutX="563.0" layoutY="200.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text layoutX="581.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="581.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="580.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Spacing">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="852.0" layoutY="84.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="182.0" text="Daily view">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <Button layoutX="692.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToCalendar" opacity="0.0" prefHeight="35.0" prefWidth="120.0" text="Button" />
+      <Line endX="-44.20001220703125" endY="3.814697265625E-6" layoutX="532.0" layoutY="36.0" startX="-98.39996337890625" startY="3.814697265625E-6" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-87.20001220703125" endY="-26.60000228881836" layoutX="540.0" layoutY="42.0" startX="-111.20001220703125" startY="-7.799999237060547" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-82.5999755859375" endY="5.8000030517578125" layoutX="537.0" layoutY="52.0" startX="-105.20001220703125" startY="-14.264461517333984" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-32.0" endY="3.814697265625E-6" layoutX="825.0" layoutY="34.0" startX="-83.60003662109375" startY="3.814697265625E-6" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-87.20001220703125" endY="-26.60000228881836" layoutX="887.0" layoutY="40.0" rotate="-90.0" startX="-111.20001220703125" startY="-7.799999237060547" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-82.5999755859375" endY="5.8000030517578125" layoutX="882.0" layoutY="53.0" rotate="-90.0" startX="-107.79998779296875" startY="-15.999996185302734" stroke="#818181" strokeWidth="5.0" />
+   </children>
+</AnchorPane>
