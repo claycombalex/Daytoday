@@ -9,6 +9,8 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -19,89 +21,104 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="923.0" prefWidth="595.0">
                <children>
-                  <TextField fx:id="eventField" layoutX="31.0" layoutY="61.0" prefHeight="30.0" prefWidth="223.0" promptText="Event Name" />
-                  <Label layoutX="26.0" layoutY="14.0" prefHeight="46.0" prefWidth="234.0" text="Name of event" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="32.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="298.0" layoutY="14.0" prefHeight="46.0" prefWidth="278.0" text="Is this event reoccuring?" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <ComboBox id="one-time-elements" fx:id="reoccurBox" layoutX="326.0" layoutY="62.0" prefHeight="29.0" prefWidth="222.0" stylesheets="@application.css" />
-                  <Label layoutX="69.0" layoutY="116.0" prefHeight="27.0" prefWidth="458.0" text="Does this event have a set end time and/or start time?" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="113.0" layoutY="187.0" prefHeight="29.0" prefWidth="370.0" text="Start Time" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="32.0" />
-                     </font>
-                  </Label>
-                  <DatePicker fx:id="startDateField" layoutX="69.0" layoutY="241.0" prefHeight="34.0" prefWidth="183.0" promptText="Start Date" />
-                  <TextField fx:id="startHourField" layoutX="262.0" layoutY="241.0" prefHeight="34.0" prefWidth="75.0" promptText="Hour" />
-                  <TextField fx:id="startMinuteField" layoutX="360.0" layoutY="241.0" prefHeight="34.0" prefWidth="75.0" promptText="Minute" />
-                  <Label layoutX="343.0" layoutY="227.0" prefHeight="54.0" prefWidth="4.0" text=":" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="32.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="112.0" layoutY="275.0" prefHeight="47.0" prefWidth="370.0" text="End Time" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="32.0" />
-                     </font>
-                  </Label>
-                  <DatePicker fx:id="endDateField" layoutX="71.0" layoutY="319.0" prefHeight="34.0" prefWidth="183.0" promptText="End Date" />
-                  <TextField fx:id="endHourField" layoutX="264.0" layoutY="319.0" prefHeight="34.0" prefWidth="75.0" promptText="Hour" />
-                  <TextField fx:id="endMinuteField" layoutX="362.0" layoutY="319.0" prefHeight="34.0" prefWidth="75.0" promptText="Minute" />
-                  <Label layoutX="345.0" layoutY="305.0" prefHeight="54.0" prefWidth="4.0" text=":" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="32.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="totalHoursField" layoutX="205.0" layoutY="415.0" prefHeight="30.0" prefWidth="186.0" promptText="Hours" />
-                  <Label layoutX="44.0" layoutY="370.0" prefHeight="28.0" prefWidth="527.0" text="How many hours will this event most likely take to complete?" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="44.0" layoutY="393.0" prefHeight="22.0" prefWidth="527.0" text="Leave this field blank if it will take the entire time from start to end" textAlignment="CENTER" />
-                  <Label layoutX="152.0" layoutY="455.0" prefHeight="28.0" prefWidth="312.0" text="Where should this event be visible?" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <CheckBox fx:id="showOnCalendar" layoutX="143.0" layoutY="498.0" mnemonicParsing="false" text="Calendar" />
-                  <CheckBox fx:id="showOnCountdown" layoutX="225.0" layoutY="498.0" mnemonicParsing="false" text="Countdowns" />
-                  <CheckBox fx:id="showOnSchedule" layoutX="327.0" layoutY="498.0" mnemonicParsing="false" text="Schedule" />
-                  <CheckBox fx:id="showOnToDo" layoutX="414.0" layoutY="498.0" mnemonicParsing="false" text="To Do List" />
-                  <Label layoutX="173.0" layoutY="537.0" prefHeight="28.0" prefWidth="250.0" text="How important is this event?" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="41.0" layoutY="558.0" prefHeight="22.0" prefWidth="527.0" text="This value is used when generating schedules. Higher values of importance are always prioritized" textAlignment="CENTER" />
-                  <ChoiceBox fx:id="importantBox2" layoutX="171.0" layoutY="580.0" prefHeight="26.0" prefWidth="253.0" />
-                  <Label alignment="CENTER" layoutX="145.0" layoutY="616.0" prefHeight="47.0" prefWidth="304.0" text="Organizational Tag" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="32.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="tagField" layoutX="172.0" layoutY="686.0" prefHeight="30.0" prefWidth="254.0" promptText="Organizational Tag" />
-                  <Label alignment="CENTER" layoutX="167.0" layoutY="660.0" prefHeight="22.0" prefWidth="262.0" text="Entering a non existing tag will create a new tag" textAlignment="CENTER" />
-                  <Label alignment="CENTER" layoutX="153.0" layoutY="724.0" prefHeight="47.0" prefWidth="304.0" text="Other Keywords" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="32.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="87.0" layoutY="760.0" prefHeight="22.0" prefWidth="455.0" text="Other keywords to find this event when searching. Seperate keywords with commas" textAlignment="CENTER" />
-                  <TextArea fx:id="keywordsField" layoutX="84.0" layoutY="798.0" prefHeight="98.0" prefWidth="458.0" promptText="Enter keywords here" />
-                  <ComboBox fx:id="setTimeBox" layoutX="79.0" layoutY="143.0" prefHeight="29.0" prefWidth="436.0" />
-                  <ComboBox fx:id="startBox" layoutX="444.0" layoutY="241.0" prefHeight="34.0" prefWidth="71.0" />
-                  <ComboBox fx:id="endBox" layoutX="444.0" layoutY="319.0" prefHeight="34.0" prefWidth="71.0" />
+                  <AnchorPane prefHeight="186.0" prefWidth="595.0">
+                     <children>
+                        <TextField fx:id="eventField" layoutX="28.0" layoutY="57.0" prefHeight="30.0" prefWidth="224.0" promptText="Event Name" />
+                        <Label layoutX="24.0" layoutY="14.0" prefHeight="46.0" prefWidth="230.0" text="Name of event" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="298.0" layoutY="14.0" prefHeight="46.0" prefWidth="278.0" text="Is this event reoccuring?" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="one-time-elements" fx:id="reoccurBox" layoutX="326.0" layoutY="57.0" prefHeight="30.0" prefWidth="222.0" stylesheets="@application.css" />
+                        <Label layoutX="69.0" layoutY="116.0" prefHeight="27.0" prefWidth="458.0" text="Does this event have a set end time and/or start time?" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="setTimeBox" layoutX="79.0" layoutY="143.0" prefHeight="29.0" prefWidth="436.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="186.0" prefHeight="94.0" prefWidth="595.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="113.0" layoutY="1.0" prefHeight="29.0" prefWidth="370.0" text="Start Time" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="startDateField" layoutX="69.0" layoutY="55.0" prefHeight="34.0" prefWidth="183.0" promptText="Start Date" />
+                        <TextField fx:id="startHourField" layoutX="262.0" layoutY="55.0" prefHeight="34.0" prefWidth="75.0" promptText="Hour" />
+                        <TextField fx:id="startMinuteField" layoutX="360.0" layoutY="55.0" prefHeight="34.0" prefWidth="75.0" promptText="Minute" />
+                        <Label layoutX="343.0" layoutY="42.0" prefHeight="50.0" prefWidth="19.0" text=":" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="startBox" layoutX="444.0" layoutY="55.0" prefHeight="34.0" prefWidth="71.0" />
+                     </children></AnchorPane>
+                  <AnchorPane layoutY="280.0" prefHeight="42.0" prefWidth="595.0">
+                     <children>
+                        <Label layoutX="345.0" layoutY="25.0" prefHeight="54.0" prefWidth="4.0" text=":" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="endHourField" layoutX="264.0" layoutY="39.0" prefHeight="34.0" prefWidth="75.0" promptText="Hour" />
+                        <Label alignment="CENTER" layoutX="112.0" layoutY="-5.0" prefHeight="47.0" prefWidth="370.0" text="End Time" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="endDateField" layoutX="71.0" layoutY="40.0" prefHeight="34.0" prefWidth="183.0" promptText="End Date" />
+                        <TextField fx:id="endMinuteField" layoutX="362.0" layoutY="39.0" prefHeight="34.0" prefWidth="75.0" promptText="Minute" />
+                        <ComboBox fx:id="endBox" layoutX="444.0" layoutY="39.0" prefHeight="34.0" prefWidth="71.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="360.0" prefWidth="595.0">
+                     <children>
+                        <Label layoutX="152.0" layoutY="95.0" prefHeight="28.0" prefWidth="312.0" text="Where should this event be visible?" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="44.0" layoutY="33.0" prefHeight="22.0" prefWidth="527.0" text="Leave this field blank if it will take the entire time from start to end" textAlignment="CENTER" />
+                        <Label layoutX="44.0" layoutY="10.0" prefHeight="28.0" prefWidth="527.0" text="How many hours will this event most likely take to complete?" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="totalHoursField" layoutX="205.0" layoutY="55.0" prefHeight="30.0" prefWidth="186.0" promptText="Hours" />
+                        <CheckBox fx:id="showOnCalendar" layoutX="134.0" layoutY="130.0" mnemonicParsing="false" text="Calendar" />
+                        <CheckBox fx:id="showOnCountdown" layoutX="216.0" layoutY="130.0" mnemonicParsing="false" text="Countdowns" />
+                        <CheckBox fx:id="showOnSchedule" layoutX="318.0" layoutY="130.0" mnemonicParsing="false" text="Schedule" />
+                        <CheckBox fx:id="showOnToDo" layoutX="405.0" layoutY="130.0" mnemonicParsing="false" text="To Do List" />
+                        <Label layoutX="173.0" layoutY="161.0" prefHeight="28.0" prefWidth="250.0" text="How important is this event?" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="41.0" layoutY="185.0" prefHeight="20.0" prefWidth="527.0" text="This value is used when generating schedules. Higher values of importance are always prioritized" textAlignment="CENTER" />
+                        <ChoiceBox fx:id="importantBox2" layoutX="171.0" layoutY="208.0" prefHeight="26.0" prefWidth="253.0" />
+                        <Label alignment="CENTER" layoutX="146.0" layoutY="241.0" prefHeight="47.0" prefWidth="304.0" text="Organizational Tag" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="167.0" layoutY="278.0" prefHeight="22.0" prefWidth="262.0" text="Entering a non existing tag will create a new tag" textAlignment="CENTER" />
+                        <TextField fx:id="tagField" layoutX="172.0" layoutY="302.0" prefHeight="30.0" prefWidth="254.0" promptText="Organizational Tag" />
+                        <Label alignment="CENTER" layoutX="148.0" layoutY="340.0" prefHeight="47.0" prefWidth="304.0" text="Other Keywords" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="87.0" layoutY="380.0" prefHeight="22.0" prefWidth="455.0" text="Other keywords to find this event when searching. Seperate keywords with commas" textAlignment="CENTER" />
+                        <TextArea fx:id="keywordsField" layoutX="84.0" layoutY="404.0" prefHeight="98.0" prefWidth="458.0" promptText="Enter keywords here" />
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
         </content>
@@ -117,5 +134,11 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../home_icon.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToHomeScreen" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" />
    </children>
 </AnchorPane>

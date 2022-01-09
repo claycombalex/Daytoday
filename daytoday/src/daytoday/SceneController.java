@@ -124,6 +124,16 @@ public class SceneController implements Initializable {
 		loadScene(currentScene, event);
 	}
 	
+	public void switchToYearly(ActionEvent event) throws IOException {
+		currentScene = "Year_Calendar.fxml";
+		loadScene(currentScene, event);
+	}
+	
+	public void switchToDaily(ActionEvent event) throws IOException {
+		currentScene = "Day_Calendar.fxml";
+		loadScene(currentScene, event);
+	}
+	
 	void Select(ActionEvent event) {
 		String s = themeBox.getSelectionModel().getSelectedItem().toString();
 	}

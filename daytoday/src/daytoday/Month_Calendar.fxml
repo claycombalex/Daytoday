@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
@@ -9,7 +11,7 @@
 
 <AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="daytoday.SceneController">
    <children>
-      <Label layoutX="548.0" text="JULY">
+      <Label alignment="CENTER" layoutX="548.0" text="JULY">
          <font>
             <Font name="System Bold" size="52.0" />
          </font>
@@ -252,10 +254,18 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e41c1c" height="40.0" layoutX="970.0" layoutY="544.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" />
       <Line endX="-44.20001220703125" endY="3.814697265625E-6" layoutX="525.0" layoutY="36.0" startX="-98.39996337890625" startY="3.814697265625E-6" stroke="#818181" strokeWidth="5.0" />
       <Line endX="-87.20001220703125" endY="-26.60000228881836" layoutX="533.0" layoutY="42.0" startX="-111.20001220703125" startY="-7.799999237060547" stroke="#818181" strokeWidth="5.0" />
-      <Line endX="-82.5999755859375" endY="5.8000030517578125" layoutX="530.0" layoutY="52.0" startX="-107.79998779296875" startY="-15.999996185302734" stroke="#818181" strokeWidth="5.0" />
+      <Line endX="-82.5999755859375" endY="5.8000030517578125" layoutX="530.0" layoutY="52.0" startX="-105.20001220703125" startY="-14.264461517333984" stroke="#818181" strokeWidth="5.0" />
       <Line endX="-32.0" endY="3.814697265625E-6" layoutX="818.0" layoutY="34.0" startX="-83.60003662109375" startY="3.814697265625E-6" stroke="#818181" strokeWidth="5.0" />
       <Line endX="-87.20001220703125" endY="-26.60000228881836" layoutX="880.0" layoutY="40.0" rotate="90.0" startX="-111.20001220703125" startY="-7.799999237060547" stroke="#818181" strokeWidth="5.0" />
       <Line endX="-82.5999755859375" endY="5.8000030517578125" layoutX="875.0" layoutY="53.0" rotate="90.0" startX="-107.79998779296875" startY="-15.999996185302734" stroke="#818181" strokeWidth="5.0" />
       <Button layoutX="466.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToWeekly" opacity="0.0" prefHeight="35.0" prefWidth="94.0" text="Button" />
+      <Button layoutX="902.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToYearly" opacity="0.0" prefHeight="35.0" prefWidth="94.0" text="Button" />
+      <Button layoutX="276.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToDaily" opacity="0.0" prefHeight="35.0" prefWidth="94.0" text="Button" />
+      <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../home_icon.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToHomeScreen" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" />
    </children>
 </AnchorPane>
