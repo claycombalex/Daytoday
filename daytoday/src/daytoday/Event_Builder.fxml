@@ -17,11 +17,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="daytoday.SceneController">
    <children>
-      <ScrollPane hbarPolicy="NEVER" layoutX="376.0" layoutY="90.0" prefHeight="553.0" prefWidth="610.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="376.0" layoutY="90.0" maxHeight="550.0" prefHeight="550.0" prefWidth="610.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="923.0" prefWidth="595.0">
+          <AnchorPane minWidth="0.0" prefWidth="595.0">
                <children>
-                  <AnchorPane prefHeight="186.0" prefWidth="595.0">
+                  <AnchorPane prefHeight="174.0" prefWidth="595.0">
                      <children>
                         <TextField fx:id="eventField" layoutX="28.0" layoutY="57.0" prefHeight="30.0" prefWidth="224.0" promptText="Event Name" />
                         <Label layoutX="24.0" layoutY="14.0" prefHeight="46.0" prefWidth="230.0" text="Name of event" textAlignment="CENTER">
@@ -34,16 +34,94 @@
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Label>
-                        <ComboBox id="one-time-elements" fx:id="reoccurBox" layoutX="326.0" layoutY="57.0" prefHeight="30.0" prefWidth="222.0" stylesheets="@application.css" />
-                        <Label layoutX="69.0" layoutY="116.0" prefHeight="27.0" prefWidth="458.0" text="Does this event have a set end time and/or start time?" textAlignment="CENTER">
+                        <ComboBox id="one-time-elements" fx:id="reoccurBox" layoutX="326.0" layoutY="57.0" onAction="#commonRepeatVisible" prefHeight="30.0" prefWidth="222.0" stylesheets="@application.css" />
+                        <Label layoutX="68.0" layoutY="106.0" prefHeight="27.0" prefWidth="458.0" text="Does this event have a set end time and/or start time?" textAlignment="CENTER">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </Label>
-                        <ComboBox fx:id="setTimeBox" layoutX="79.0" layoutY="143.0" prefHeight="29.0" prefWidth="436.0" />
+                        <ComboBox fx:id="setTimeBox" layoutX="80.0" layoutY="133.0" onAction="#timeVisible" prefHeight="29.0" prefWidth="436.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutY="186.0" prefHeight="94.0" prefWidth="595.0">
+                  <AnchorPane fx:id="commonRepeat" layoutY="174.0" prefHeight="64.0" prefWidth="595.0" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="157.0" prefHeight="27.0" prefWidth="289.0" text="Repeat this event at least every..." textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="1.0" layoutX="315.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="61.0" />
+                        <ComboBox fx:id="repeatBox" layoutX="224.0" layoutY="32.0" onAction="#repeatTypeVisible" prefHeight="26.0" prefWidth="146.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="repeatWeekly" layoutY="238.0" prefHeight="113.0" prefWidth="595.0" visible="false">
+                     <children>
+                        <CheckBox layoutX="77.0" layoutY="42.0" mnemonicParsing="false" text="Sunday">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <Label alignment="CENTER" layoutX="192.0" layoutY="7.0" prefHeight="27.0" prefWidth="211.0" text="What days of the week?" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <CheckBox layoutX="181.0" layoutY="42.0" mnemonicParsing="false" text="Monday">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="288.0" layoutY="42.0" mnemonicParsing="false" text="Tuesday">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="397.0" layoutY="42.0" mnemonicParsing="false" text="Wednesday">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="139.0" layoutY="75.0" mnemonicParsing="false" text="Thursday">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="255.0" layoutY="75.0" mnemonicParsing="false" text="Friday">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="345.0" layoutY="75.0" mnemonicParsing="false" text="Saturday">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="repeatMonthly" layoutY="351.0" prefWidth="595.0" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="180.0" layoutY="3.0" prefHeight="27.0" prefWidth="235.0" text="What days of the month?" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="108.0" layoutY="25.0" prefHeight="22.0" prefWidth="379.0" text="Enter the desired days of the month (1 to 31), seperated by commas" textAlignment="CENTER" />
+                        <Label alignment="CENTER" layoutX="70.0" layoutY="40.0" prefHeight="22.0" prefWidth="454.0" text="If a month does not contain the day, then the event will not show during that month" textAlignment="CENTER" />
+                        <TextField layoutX="204.0" layoutY="63.0" prefHeight="31.0" prefWidth="186.0" promptText="Days of the Month" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="repeatYearly" layoutY="449.0" prefHeight="73.0" prefWidth="595.0" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="194.0" layoutY="3.0" prefHeight="27.0" prefWidth="206.0" text="What days of the year?" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="80.0" layoutY="24.0" prefHeight="23.0" prefWidth="434.0" text="Enter the desired days of the year in the format MM/DD, seperated by commas" textAlignment="CENTER" />
+                        <TextField layoutX="204.0" layoutY="47.0" prefHeight="31.0" prefWidth="186.0" promptText="Days of the Year" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="startPane" layoutY="167.0" prefHeight="90.0" prefWidth="595.0" visible="false">
                      <children>
                         <Label alignment="CENTER" layoutX="113.0" layoutY="1.0" prefHeight="29.0" prefWidth="370.0" text="Start Time" textAlignment="CENTER">
                            <font>
@@ -59,8 +137,9 @@
                            </font>
                         </Label>
                         <ComboBox fx:id="startBox" layoutX="444.0" layoutY="55.0" prefHeight="34.0" prefWidth="71.0" />
-                     </children></AnchorPane>
-                  <AnchorPane layoutY="280.0" prefHeight="42.0" prefWidth="595.0">
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="endPane" layoutY="270.0" prefHeight="90.0" prefWidth="595.0" visible="false">
                      <children>
                         <Label layoutX="345.0" layoutY="25.0" prefHeight="54.0" prefWidth="4.0" text=":" textAlignment="CENTER">
                            <font>
@@ -78,7 +157,7 @@
                         <ComboBox fx:id="endBox" layoutX="444.0" layoutY="39.0" prefHeight="34.0" prefWidth="71.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutY="360.0" prefWidth="595.0">
+                  <AnchorPane fx:id="commonValues" layoutY="350.0" prefHeight="550.0" prefWidth="595.0" visible="false">
                      <children>
                         <Label layoutX="152.0" layoutY="95.0" prefHeight="28.0" prefWidth="312.0" text="Where should this event be visible?" textAlignment="CENTER">
                            <font>
@@ -129,7 +208,7 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="5.0" layoutX="501.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="355.0" />
-      <Button layoutX="620.0" layoutY="660.0" mnemonicParsing="false" onAction="#createEvent" prefHeight="50.0" prefWidth="126.0" text="Create Event">
+      <Button layoutX="610.0" layoutY="660.0" mnemonicParsing="false" onAction="#createEvent" prefHeight="50.0" prefWidth="126.0" text="Create Event">
          <font>
             <Font size="18.0" />
          </font>

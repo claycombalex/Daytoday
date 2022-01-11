@@ -56,6 +56,7 @@ public class SceneController implements Initializable {
 	public ComboBox<String> setTimeBox;
 	public ComboBox<String> startBox;
 	public ComboBox<String> endBox;
+	public ComboBox<String> repeatBox;
 	public ChoiceBox<String> importantBox2;
 	public TextField eventField;
 	public TextField startHourField;
@@ -71,6 +72,13 @@ public class SceneController implements Initializable {
 	public CheckBox showOnToDo;
 	public TextField tagField;
 	public TextArea keywordsField;
+	public AnchorPane commonRepeat;
+	public AnchorPane repeatWeekly;
+	public AnchorPane repeatMonthly;
+	public AnchorPane repeatYearly;
+	public AnchorPane startPane;
+	public AnchorPane endPane;
+	public AnchorPane commonValues;
 	
 	//Control nodes for todo list
 	public AnchorPane toDoListMain;
@@ -84,6 +92,7 @@ public class SceneController implements Initializable {
 	ObservableList<String> reoccurList = FXCollections.observableArrayList("No (only occurs once)", "Yes (this event will repeat)");
 	ObservableList<String> setTimeList = FXCollections.observableArrayList("It does not have a set start time or end time", "This event has a set start time",
 			"This event has a set end time", "This event has both a set start time and a set end time");
+	ObservableList<String> repeatList = FXCollections.observableArrayList("Day", "Week", "Month", "Year");
 	
 	public void setManager(Manager manager) {
 		this.manager = manager;
@@ -176,6 +185,7 @@ public class SceneController implements Initializable {
 				startBox.setValue("AM");
 				endBox.setItems(AMPMList);
 				endBox.setValue("AM");
+				repeatBox.setItems(repeatList);
 				break;
 			default:
 				break;
@@ -193,11 +203,95 @@ public class SceneController implements Initializable {
 		return retStr;
 	}
 	
-	public void reoccurOrOnce() {
-		String choice = reoccurBox.getValue();
-		if(choice.contentEquals("No (only occurs once)")) {
-			System.out.println(reoccurBox.getId());
+	public void commonRepeatVisible(ActionEvent event) {
+		if(reoccurBox.getValue().contentEquals("Yes (this event will repeat)")) {
+			commonRepeat.setVisible(true);
+		} else if(reoccurBox.getValue().contentEquals("No (only occurs once)")) {
+			commonRepeat.setVisible(false);
 		}
+		commonValues.setVisible(true);
+		setPositions();
+	}
+	
+	public void repeatTypeVisible(ActionEvent event) {
+		if(repeatBox.getValue().contentEquals("Week")) {
+			repeatWeekly.setVisible(true);
+			repeatMonthly.setVisible(false);
+			repeatYearly.setVisible(false);
+		} else if(repeatBox.getValue().contentEquals("Month")) {
+			repeatWeekly.setVisible(false);
+			repeatMonthly.setVisible(true);
+			repeatYearly.setVisible(false);
+		} else if(repeatBox.getValue().contentEquals("Year")) {
+			repeatWeekly.setVisible(false);
+			repeatMonthly.setVisible(false);
+			repeatYearly.setVisible(true);
+		} else {
+			repeatWeekly.setVisible(false);
+			repeatMonthly.setVisible(false);
+			repeatYearly.setVisible(false);
+		}
+		setPositions();
+	}
+	
+	public void timeVisible(ActionEvent event) {
+		if(setTimeBox.getValue().contentEquals("This event has a set start time")) {
+			startPane.setVisible(true);
+			endPane.setVisible(false);
+		} else if(setTimeBox.getValue().contentEquals("This event has a set end time")) {
+			startPane.setVisible(false);
+			endPane.setVisible(true);
+		} else if(setTimeBox.getValue().contentEquals("This event has both a set start time and a set end time")) {
+			startPane.setVisible(true);
+			endPane.setVisible(true);
+		} else {
+			startPane.setVisible(false);
+			endPane.setVisible(false);
+		}
+		commonValues.setVisible(true);
+		setPositions();
+	}
+	
+	private void setPositions() {
+		commonRepeat.setLayoutY(getLayoutY(commonRepeat));
+		repeatWeekly.setLayoutY(getLayoutY(repeatWeekly));
+		repeatMonthly.setLayoutY(getLayoutY(repeatMonthly));
+		repeatYearly.setLayoutY(getLayoutY(repeatYearly));
+		startPane.setLayoutY(getLayoutY(startPane));
+		endPane.setLayoutY(getLayoutY(endPane));
+		commonValues.setLayoutY(getLayoutY(commonValues));
+	}
+	
+	private int getLayoutY(Object controlNode) {
+		switch(controlNode.toString()) {
+			case "AnchorPane[id=commonRepeat]": return 174;
+			case "AnchorPane[id=repeatWeekly]": return 238;
+			case "AnchorPane[id=repeatMonthly]": return 238;
+			case "AnchorPane[id=repeatYearly]": return 238;
+			case "AnchorPane[id=startPane]":
+				if(repeatYearly.isVisible()) return 311;
+				else if(repeatMonthly.isVisible()) return 344;
+				else if(repeatWeekly.isVisible()) return 351;
+				else if(commonRepeat.isVisible()) return 238;
+				else return 174;
+			case "AnchorPane[id=endPane]":
+				if(startPane.isVisible()) return (int) (startPane.getLayoutY() + 90);
+				else if(repeatYearly.isVisible()) return 311;
+				else if(repeatMonthly.isVisible()) return 344;
+				else if(repeatWeekly.isVisible()) return 351;
+				else if(commonRepeat.isVisible()) return 238;
+				else return 174;
+			case "AnchorPane[id=commonValues]":
+				if(endPane.isVisible()) return (int) (endPane.getLayoutY() + 90);
+				else if(startPane.isVisible()) return (int) (startPane.getLayoutY() + 90);
+				else if(repeatYearly.isVisible()) return 311;
+				else if(repeatMonthly.isVisible()) return 344;
+				else if(repeatWeekly.isVisible()) return 351;
+				else if(commonRepeat.isVisible()) return 238;
+				else return 174;
+		}
+		
+		return 0;
 	}
 	
 	public void createEvent(ActionEvent event) throws IOException {
