@@ -326,10 +326,23 @@ public class SceneController implements Initializable {
 		
 		LocalDate sdat = startDateField.getValue();
 		LocalDate edat = endDateField.getValue();
+		int startHour = Integer.parseInt(startHourField.getText());
+		int endHour = Integer.parseInt(endHourField.getText());
+		
+		if(startHour == 12)
+			startHour = 0;
+		if(endHour == 12)
+			endHour = 0;
+		
+		if(startBox.getValue().contentEquals("PM"))
+			startHour += 12;
+		if(endBox.getValue().contentEquals("PM"))
+			endHour += 12;
+		
 		String startTime = "" + sdat.getYear() + String.format("%02d", sdat.getMonth().ordinal() + 1) + String.format("%02d", sdat.getDayOfMonth()) + 
-				String.format("%02d", Integer.parseInt(startHourField.getText())) + String.format("%02d", Integer.parseInt(startMinuteField.getText()));
+				String.format("%02d", startHour) + String.format("%02d", Integer.parseInt(startMinuteField.getText()));
 		String endTime = "" + edat.getYear() + String.format("%02d", edat.getMonth().ordinal() + 1) + String.format("%02d", edat.getDayOfMonth()) + 
-				String.format("%02d", Integer.parseInt(endHourField.getText())) + String.format("%02d", Integer.parseInt(endMinuteField.getText()));
+				String.format("%02d", endHour) + String.format("%02d", Integer.parseInt(endMinuteField.getText()));
 		
 		int hoursToComplete = 0;
 		//possibly add minutes to complete

@@ -8,7 +8,8 @@ public class Event {
 	private int times;							//0 = no set end/start time, 1 = set start time, 2 = set end time, 3 = set start and end time
 	
 	private int interval;						//-1 = none, 0 = day, 1 = week, 2 = month, 3 = year
-	private String week;						//string of 7 binary digits
+	private String week;
+	private boolean[] weekArr;
 	private ArrayList<Integer> month;			//days of the month in integer form
 	private ArrayList<String> year;				//days of the year in string form
 	
@@ -32,6 +33,18 @@ public class Event {
 		
 		this.interval = interval;
 		this.week = week;
+		
+		weekArr = new boolean[7];
+		if(!week.isEmpty()) {
+			for(int i = 0; i < 7; i++) {
+				int tempInt = Character.getNumericValue(week.charAt(i));
+				if(tempInt == 1)
+					weekArr[i] = true;
+				else 
+					weekArr[i] = false;
+			}
+		}
+		
 		this.month = month;
 		this.year = year;
 		
@@ -53,10 +66,16 @@ public class Event {
 	}
 	
 	public String toString() {
-		String retStr = name + "|" + routine + "|" + times + "|" + interval + "|" + week + "|" + month.toString() + "|" + year.toString() + "|" + 
+		String monthToString = "";
+		String yearToString = "";
+		if(month != null)
+			monthToString = month.toString();		
+		if(year != null)
+			yearToString = year.toString();
+		
+		String retStr = name + "|" + routine + "|" + times + "|" + interval + "|" + week + "|" + monthToString + "|" + yearToString + "|" + 
 						startTime + "|" + endTime + "|" + hoursToComplete + "|" + calendar + "|" + todo + "|" + schedule + "|" + countdown + "|" + 
 						importance + "|" + tag + "|" + keywords.toString();
-		//String name, boolean routine, int times, int interval, String week, ArrayList<Integer> month, ArrayList<String> year, String startTime, String endTime, int hoursToComplete, boolean[] appear, int importance, String tag, ArrayList<String> keywords
 		return retStr + "\n";
 	}
 }

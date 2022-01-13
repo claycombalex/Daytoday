@@ -1,1 +1,2 @@
-Test Event|true|3|2||[5, 6, 8]|[]|202201120424|202201310623|423|true|true|true|true|5|eeeeeeeeeeeee|[aaaaaa, bbbbbbbbb, ccccccccc]
+Test Event 2|false|3|-1||[]|[]|202112280524|202201040243|123|false|false|false|false|5|testing tag|[keyword 1, keyword 2, keyword 3]
+Time Test|false|3|-1||[]|[]|202201010045|202201251440|124|true|false|true|false|4|testing tag|[key1, key2, key3]
