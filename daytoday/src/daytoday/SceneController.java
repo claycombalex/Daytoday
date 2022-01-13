@@ -72,6 +72,7 @@ public class SceneController implements Initializable {
 	public TextField tagField;
 	public TextArea keywordsField;
 	public AnchorPane commonRepeat, repeatWeekly, repeatMonthly, repeatYearly, startPane, endPane, commonValues;
+	public AnchorPane invalidInput;
 	
 	//Control nodes for todo list
 	public AnchorPane toDoListMain;
@@ -175,6 +176,14 @@ public class SceneController implements Initializable {
 		setPositions();
 	}
 	
+	public void hideInvalidPopup(ActionEvent event) {
+		invalidInput.setVisible(false);
+	}
+	
+	private void showInvalidPopup() {
+		invalidInput.setVisible(true);
+	}
+	
 	public void repeatTypeVisible(ActionEvent event) {
 		if(repeatBox.getValue().contentEquals("Week")) {
 			repeatWeekly.setVisible(true);
@@ -256,10 +265,23 @@ public class SceneController implements Initializable {
 	}
 	
 	public void createEvent(ActionEvent event) throws IOException {
-		boolean routineVal = true;
-		if(reoccurBox.getValue().contentEquals("No (only occurs once)"))
-			routineVal = false;
+		if(eventField.getText().isEmpty()) {
+			showInvalidPopup();
+			return;
+		}
 		
+		boolean routineVal = true;
+		if(reoccurBox.getValue() == null) {
+			showInvalidPopup();
+			return;
+		} else if(reoccurBox.getValue().contentEquals("No (only occurs once)")) {
+			routineVal = false;
+		}
+		
+		if(setTimeBox.getValue() == null) {
+			showInvalidPopup();
+			return;
+		}
 		int times;
 		switch(setTimeBox.getValue().toString()) {
 			case "It does not have a set start time or end time": times = 0; break;
@@ -269,6 +291,10 @@ public class SceneController implements Initializable {
 			default: times = -1; break;
 		}
 		
+		if(routineVal == true && repeatBox.getValue() == null) {
+			showInvalidPopup();
+			return;
+		}
 		int interval;
 		switch(repeatBox.getValue().toString()) {
 			case "Day": interval = 0; break;
@@ -289,13 +315,28 @@ public class SceneController implements Initializable {
 					int tempInt = checkboxes[i].isSelected() ? 1 : 0;
 					weekStr = weekStr + tempInt;
 				}
+				
+				if(weekStr.contentEquals("0000000")) {
+					showInvalidPopup();
+					return;
+				}
 				break;
 			case 2:
 				tempDays = new ArrayList<String>(Arrays.asList(monthField.getText().split(",")));
 				monthDays = new ArrayList<Integer>();
 				for(int i = 0; i < tempDays.size(); i++) {
 					tempDays.set(i, tempDays.get(i).trim());
-					monthDays.add(Integer.parseInt(tempDays.get(i)));
+					try {
+						int curDay = Integer.parseInt(tempDays.get(i));
+						if(curDay < 1 || curDay > 31) {
+							showInvalidPopup();
+							return;
+						}
+						monthDays.add(curDay);
+					} catch (NumberFormatException nfe) {
+						showInvalidPopup();
+						return;
+					}
 				}
 				break;
 			case 3:
@@ -310,6 +351,10 @@ public class SceneController implements Initializable {
 		
 		int importantVal = 0;
 		String tempStr = "";
+		if(importantBox2.getValue() == null) {
+			showInvalidPopup();
+			return;
+		}
 		Scanner importantScan = new Scanner(importantBox2.getValue());
 		importantScan.useDelimiter("\\(|\\)");
 		importantScan.next();
