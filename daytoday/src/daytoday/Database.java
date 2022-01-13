@@ -64,9 +64,10 @@ public class Database {
 			keywords.add(eventScan.next());
 		}
 		
-		Event newEvent = new Event(theName, theRoutine, theImportance, appearArr, theTag, keywords, startTime, endTime, hours, null, null);
-		events.add(newEvent);
-		System.out.println(newEvent.toString());
+		//Event newEvent = new Event(theName, theRoutine, theImportance, appearArr, theTag, keywords, startTime, endTime, hours, null, null);
+		//events.add(newEvent);
+		//System.out.println(newEvent.toString());
+		eventScan.close();
 	}
 	
 	//when new event is created, write it to the text file

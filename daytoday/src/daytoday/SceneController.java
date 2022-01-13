@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.Scanner;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -64,21 +63,15 @@ public class SceneController implements Initializable {
 	public TextField endHourField;
 	public TextField endMinuteField;
 	public TextField totalHoursField;
+	public TextField monthField;
+	public TextField yearField;
 	public DatePicker startDateField;
 	public DatePicker endDateField;
-	public CheckBox showOnCalendar;
-	public CheckBox showOnCountdown;
-	public CheckBox showOnSchedule;
-	public CheckBox showOnToDo;
+	public CheckBox showOnCalendar, showOnCountdown, showOnSchedule, showOnToDo;
+	public CheckBox sundayBox, mondayBox, tuesdayBox, wednesdayBox, thursdayBox, fridayBox, saturdayBox;
 	public TextField tagField;
 	public TextArea keywordsField;
-	public AnchorPane commonRepeat;
-	public AnchorPane repeatWeekly;
-	public AnchorPane repeatMonthly;
-	public AnchorPane repeatYearly;
-	public AnchorPane startPane;
-	public AnchorPane endPane;
-	public AnchorPane commonValues;
+	public AnchorPane commonRepeat, repeatWeekly, repeatMonthly, repeatYearly, startPane, endPane, commonValues;
 	
 	//Control nodes for todo list
 	public AnchorPane toDoListMain;
@@ -98,50 +91,15 @@ public class SceneController implements Initializable {
 		this.manager = manager;
 	}
 	
-	public void switchToIntroScreen(ActionEvent event) throws IOException {
-		currentScene = "Intro_Screen.fxml";
-		loadScene(currentScene, event);
-	}
-	
-	public void switchToNewUser(ActionEvent event) throws IOException {
-		currentScene = "New_User.fxml";
-		loadScene(currentScene, event);
-	}
-	
-	public void switchToDoList(ActionEvent event) throws IOException {
-		currentScene = "To_Do_List.fxml";
-		loadScene(currentScene, event);
-	}
-	
-	public void switchToHomeScreen(ActionEvent event) throws IOException {
-		currentScene = "Home_Screen.fxml";
-		loadScene(currentScene, event);
-	}
-	
-	public void switchToEventBuilder(ActionEvent event) throws IOException {
-		currentScene = "Event_Builder.fxml";
-		loadScene(currentScene, event);
-	}
-	
-	public void switchToCalendar(ActionEvent event) throws IOException {
-		currentScene = "Month_Calendar.fxml";
-		loadScene(currentScene, event);
-	}
-	
-	public void switchToWeekly(ActionEvent event) throws IOException {
-		currentScene = "Week_Calendar.fxml";
-		loadScene(currentScene, event);
-	}
-	
-	public void switchToYearly(ActionEvent event) throws IOException {
-		currentScene = "Year_Calendar.fxml";
-		loadScene(currentScene, event);
-	}
-	
-	public void switchToDaily(ActionEvent event) throws IOException {
-		currentScene = "Day_Calendar.fxml";
-		loadScene(currentScene, event);
-	}
+	public void switchToIntroScreen(ActionEvent event) throws IOException { loadScene("Intro_Screen.fxml", event); }
+	public void switchToNewUser(ActionEvent event) throws IOException { loadScene("New_User.fxml", event); }
+	public void switchToDoList(ActionEvent event) throws IOException { loadScene("To_Do_List.fxml", event); }
+	public void switchToHomeScreen(ActionEvent event) throws IOException { loadScene("Home_Screen.fxml", event); }
+	public void switchToEventBuilder(ActionEvent event) throws IOException { loadScene("Event_Builder.fxml", event); }
+	public void switchToCalendar(ActionEvent event) throws IOException { loadScene("Month_Calendar.fxml", event); }
+	public void switchToWeekly(ActionEvent event) throws IOException { loadScene("Week_Calendar.fxml", event); }
+	public void switchToYearly(ActionEvent event) throws IOException { loadScene("Year_Calendar.fxml", event); }
+	public void switchToDaily(ActionEvent event) throws IOException { loadScene("Day_Calendar.fxml", event); }
 	
 	void Select(ActionEvent event) {
 		String s = themeBox.getSelectionModel().getSelectedItem().toString();
@@ -207,7 +165,11 @@ public class SceneController implements Initializable {
 		if(reoccurBox.getValue().contentEquals("Yes (this event will repeat)")) {
 			commonRepeat.setVisible(true);
 		} else if(reoccurBox.getValue().contentEquals("No (only occurs once)")) {
+			repeatBox.setValue("");
 			commonRepeat.setVisible(false);
+			repeatWeekly.setVisible(false);
+			repeatMonthly.setVisible(false);
+			repeatYearly.setVisible(false);
 		}
 		commonValues.setVisible(true);
 		setPositions();
@@ -290,7 +252,6 @@ public class SceneController implements Initializable {
 				else if(commonRepeat.isVisible()) return 238;
 				else return 174;
 		}
-		
 		return 0;
 	}
 	
@@ -298,6 +259,54 @@ public class SceneController implements Initializable {
 		boolean routineVal = true;
 		if(reoccurBox.getValue().contentEquals("No (only occurs once)"))
 			routineVal = false;
+		
+		int times;
+		switch(setTimeBox.getValue().toString()) {
+			case "It does not have a set start time or end time": times = 0; break;
+			case "This event has a set start time": times = 1; break;
+			case "This event has a set end time": times = 2; break;
+			case "This event has both a set start time and a set end time": times = 3; break;
+			default: times = -1; break;
+		}
+		
+		int interval;
+		switch(repeatBox.getValue().toString()) {
+			case "Day": interval = 0; break;
+			case "Week": interval = 1; break;
+			case "Month": interval = 2; break;
+			case "Year": interval = 3; break;
+			default: interval = -1; break;
+		}
+		
+		String weekStr = "";
+		ArrayList<String> tempDays = null;
+		ArrayList<Integer> monthDays = new ArrayList<Integer>();
+		ArrayList<String> yearDays = new ArrayList<String>();
+		switch(interval) {
+			case 1:
+				CheckBox[] checkboxes = {sundayBox, mondayBox, tuesdayBox, wednesdayBox, thursdayBox, fridayBox, saturdayBox};
+				for(int i = 0; i < 7; i++) {
+					int tempInt = checkboxes[i].isSelected() ? 1 : 0;
+					weekStr = weekStr + tempInt;
+				}
+				break;
+			case 2:
+				tempDays = new ArrayList<String>(Arrays.asList(monthField.getText().split(",")));
+				monthDays = new ArrayList<Integer>();
+				for(int i = 0; i < tempDays.size(); i++) {
+					tempDays.set(i, tempDays.get(i).trim());
+					monthDays.add(Integer.parseInt(tempDays.get(i)));
+				}
+				break;
+			case 3:
+				yearDays = new ArrayList<String>(Arrays.asList(yearField.getText().split(",")));
+				for(int i = 0; i < yearDays.size(); i++) {
+					yearDays.set(i, yearDays.get(i).trim());
+				}
+				break;
+		}
+		
+		ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(keywordsField.getText().split(",")));
 		
 		int importantVal = 0;
 		String tempStr = "";
@@ -310,8 +319,6 @@ public class SceneController implements Initializable {
 		
 		boolean[] appearVal = {showOnCalendar.isSelected(), showOnCountdown.isSelected(), 
 				showOnSchedule.isSelected(), showOnToDo.isSelected()};
-		
-		ArrayList<String> keywords = (ArrayList<String>) Arrays.asList(keywordsField.getText().split(","));
 		
 		for(int i = 0; i < keywords.size(); i++) {
 			keywords.set(i, keywords.get(i).trim());
@@ -329,8 +336,8 @@ public class SceneController implements Initializable {
 		if(!totalHoursField.getText().equals("")) {
 			hoursToComplete = Integer.parseInt(totalHoursField.getText());
 		}
-		
-		Event theEvent = new Event(eventField.getText(), routineVal, importantVal, appearVal, tagField.getText(), keywords, startTime, endTime, hoursToComplete, null, null);
+
+		Event theEvent = new Event(eventField.getText(), routineVal, times, interval, weekStr, monthDays, yearDays, startTime, endTime, hoursToComplete, appearVal, importantVal, tagField.getText(), keywords);
 		manager.db.addEvent(theEvent);
 		switchToHomeScreen(event);
 	}
@@ -372,7 +379,6 @@ public class SceneController implements Initializable {
 			Font theFont = new Font("System", 18);
 			titled.setFont(theFont);
 			titled.setAnimated(false);
-			
 			accordionField.getPanes().add(titled);
 		}
 	}

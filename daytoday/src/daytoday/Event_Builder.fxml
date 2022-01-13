@@ -56,7 +56,7 @@
                   </AnchorPane>
                   <AnchorPane fx:id="repeatWeekly" layoutY="238.0" prefHeight="113.0" prefWidth="595.0" visible="false">
                      <children>
-                        <CheckBox layoutX="77.0" layoutY="42.0" mnemonicParsing="false" text="Sunday">
+                        <CheckBox fx:id="sundayBox" layoutX="77.0" layoutY="42.0" mnemonicParsing="false" text="Sunday">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -66,32 +66,32 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </Label>
-                        <CheckBox layoutX="181.0" layoutY="42.0" mnemonicParsing="false" text="Monday">
+                        <CheckBox fx:id="mondayBox" layoutX="181.0" layoutY="42.0" mnemonicParsing="false" text="Monday">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </CheckBox>
-                        <CheckBox layoutX="288.0" layoutY="42.0" mnemonicParsing="false" text="Tuesday">
+                        <CheckBox fx:id="tuesdayBox" layoutX="288.0" layoutY="42.0" mnemonicParsing="false" text="Tuesday">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </CheckBox>
-                        <CheckBox layoutX="397.0" layoutY="42.0" mnemonicParsing="false" text="Wednesday">
+                        <CheckBox fx:id="wednesdayBox" layoutX="397.0" layoutY="42.0" mnemonicParsing="false" text="Wednesday">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </CheckBox>
-                        <CheckBox layoutX="139.0" layoutY="75.0" mnemonicParsing="false" text="Thursday">
+                        <CheckBox fx:id="thursdayBox" layoutX="139.0" layoutY="75.0" mnemonicParsing="false" text="Thursday">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </CheckBox>
-                        <CheckBox layoutX="255.0" layoutY="75.0" mnemonicParsing="false" text="Friday">
+                        <CheckBox fx:id="fridayBox" layoutX="255.0" layoutY="75.0" mnemonicParsing="false" text="Friday">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </CheckBox>
-                        <CheckBox layoutX="345.0" layoutY="75.0" mnemonicParsing="false" text="Saturday">
+                        <CheckBox fx:id="saturdayBox" layoutX="345.0" layoutY="75.0" mnemonicParsing="false" text="Saturday">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -107,7 +107,7 @@
                         </Label>
                         <Label alignment="CENTER" layoutX="108.0" layoutY="25.0" prefHeight="22.0" prefWidth="379.0" text="Enter the desired days of the month (1 to 31), seperated by commas" textAlignment="CENTER" />
                         <Label alignment="CENTER" layoutX="70.0" layoutY="40.0" prefHeight="22.0" prefWidth="454.0" text="If a month does not contain the day, then the event will not show during that month" textAlignment="CENTER" />
-                        <TextField layoutX="204.0" layoutY="63.0" prefHeight="31.0" prefWidth="186.0" promptText="Days of the Month" />
+                        <TextField fx:id="monthField" layoutX="204.0" layoutY="63.0" prefHeight="31.0" prefWidth="186.0" promptText="Days of the Month" />
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="repeatYearly" layoutY="449.0" prefHeight="73.0" prefWidth="595.0" visible="false">
@@ -118,7 +118,7 @@
                            </font>
                         </Label>
                         <Label alignment="CENTER" layoutX="80.0" layoutY="24.0" prefHeight="23.0" prefWidth="434.0" text="Enter the desired days of the year in the format MM/DD, seperated by commas" textAlignment="CENTER" />
-                        <TextField layoutX="204.0" layoutY="47.0" prefHeight="31.0" prefWidth="186.0" promptText="Days of the Year" />
+                        <TextField fx:id="yearField" layoutX="204.0" layoutY="47.0" prefHeight="31.0" prefWidth="186.0" promptText="Days of the Year" />
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="startPane" layoutY="167.0" prefHeight="90.0" prefWidth="595.0" visible="false">
