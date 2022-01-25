@@ -371,8 +371,39 @@ public class SceneController implements Initializable {
 		
 		LocalDate sdat = startDateField.getValue();
 		LocalDate edat = endDateField.getValue();
-		int startHour = Integer.parseInt(startHourField.getText());
-		int endHour = Integer.parseInt(endHourField.getText());
+		int startHour = 0;
+		int endHour = 0;
+		if((times == 3 || times == 1) && startHourField.getText().isBlank()) {
+			showInvalidPopup();
+			return;
+		} else if(times == 3 || times == 1) {
+			try {
+				startHour = Integer.parseInt(startHourField.getText());
+				if(startHour > 12 || startHour < 1) {
+					showInvalidPopup();
+					return;
+				}
+			} catch (NumberFormatException nfe) {
+				showInvalidPopup();
+				return;
+			}
+		}
+		
+		if((times == 3 || times == 2) && endHourField.getText().isBlank()) {
+			showInvalidPopup();
+			return;
+		} else if(times == 3 || times == 2) {
+			try {
+				endHour = Integer.parseInt(endHourField.getText());
+				if(endHour > 12 || endHour < 1) {
+					showInvalidPopup();
+					return;
+				}
+			} catch(NumberFormatException nfe) {
+				showInvalidPopup();
+				return;
+			}
+		}
 		
 		if(startHour == 12)
 			startHour = 0;
@@ -384,9 +415,14 @@ public class SceneController implements Initializable {
 		if(endBox.getValue().contentEquals("PM"))
 			endHour += 12;
 		
-		String startTime = "" + sdat.getYear() + String.format("%02d", sdat.getMonth().ordinal() + 1) + String.format("%02d", sdat.getDayOfMonth()) + 
+		String startTime = "";
+		String endTime = "";
+		if(times == 1 || times == 3)
+			startTime = "" + sdat.getYear() + String.format("%02d", sdat.getMonth().ordinal() + 1) + String.format("%02d", sdat.getDayOfMonth()) + 
 				String.format("%02d", startHour) + String.format("%02d", Integer.parseInt(startMinuteField.getText()));
-		String endTime = "" + edat.getYear() + String.format("%02d", edat.getMonth().ordinal() + 1) + String.format("%02d", edat.getDayOfMonth()) + 
+		
+		if(times == 2 || times == 3)
+			endTime = "" + edat.getYear() + String.format("%02d", edat.getMonth().ordinal() + 1) + String.format("%02d", edat.getDayOfMonth()) + 
 				String.format("%02d", endHour) + String.format("%02d", Integer.parseInt(endMinuteField.getText()));
 		
 		int hoursToComplete = 0;
